@@ -1,6 +1,6 @@
 // Размеры
 $content-max-weight: 1200px;
-$content-padding: 0 20px;
+$content-padding: 20px;
 
 // Шрифт
 $font-primary: "MuseoSansCyrl", sans-serif;
@@ -92,7 +92,7 @@ a {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: $content-padding;
+	padding: 0 $content-padding;
 }
 
 .cont-block {
@@ -110,6 +110,14 @@ a {
 
 .cont-block_mb30 {
 	margin: 0 0 30px;
+}
+
+.cont-block_m50 {
+	margin: 50px 0;
+}
+
+.cont-block_mb50 {
+	margin: 0 0 50px;
 }
 
 .cont-block_m70 {
@@ -162,8 +170,18 @@ a {
 	}
 }
 
+// // //
+.color-main {
+	color: var(--color-main);
+}
+
+.color-main-text {
+	color: var(--color-main-text);
+}
+
 @import "./common/header.scss";
 @import "./common/main-slider.scss";
+@import "./common/main-utp.scss";
 @import "./pages/index.scss";
 @import "./common/footer.scss";
 
