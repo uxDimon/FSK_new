@@ -1,0 +1,5 @@
+<svg width="84" height="450" viewBox="0 0 84 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4 0L84 225L4 450L0.999999 450L81 225L1 -8.30815e-08L4 0Z" fill="#FC4C02" />
+    <path d="M1 -1.04765e-07L81 225L0.999999 450L-5.29356e-07 450L3.05176e-05 -2.2432e-06L1 -1.04765e-07Z"
+        fill="var(--icon-color, #ffffff)" />
+</svg>
