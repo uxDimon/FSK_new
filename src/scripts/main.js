@@ -61,3 +61,16 @@ for (const slider of document.querySelectorAll(".main-slider")) {
 		},
 	});
 }
+
+// button-active
+for (const buttonActive of document.querySelectorAll(".button:not(.button.button_icon)")) {
+	buttonActive.addEventListener("click", (event) => {
+		const button = buttonActive.getBoundingClientRect(),
+			buttonEffect = buttonActive.querySelector(".buttonEffect"),
+			buttonEffectHtml = `<div class="buttonEffect" style="top:${event.clientY - 10 - button.y}px; left:${event.clientX - 10 - button.x}px;"></div>`;
+		console.log(button);
+		console.log(event.clientY);
+		if (buttonEffect) buttonEffect.remove();
+		buttonActive.insertAdjacentHTML("afterbegin", buttonEffectHtml);
+	});
+}

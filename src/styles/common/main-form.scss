@@ -1,0 +1,131 @@
+@mixin udoli {
+	--color-main: #e94200;
+	--color-dop: #727272;
+	--color-main-back: #ffffff;
+	--color-dop-back: #f6f8fa;
+	--color-border: #e5e5e5;
+	--color-main-text: #000000;
+	--color-dop-text: #bebebe;
+	--color-cta: #80b918;
+	--color-error: #eb001b;
+	--color-alert: #ffdd2d;
+}
+
+@mixin center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+$content-max-weight: 1200px;
+$content-padding: 20px;
+
+.main-form {
+	border: 1px solid var(--color-border);
+	border-radius: 10px;
+	display: flex;
+	align-items: stretch;
+}
+
+.main-form__body {
+	flex: 1 0 50%;
+	padding: 45px;
+}
+
+.main-form__h {
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 19px;
+	color: var(--color-dop);
+	margin: 0 0 5px;
+}
+
+.main-form__text {
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 25px;
+	margin-bottom: 32px;
+}
+
+.main-form__form {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-column-gap: 30px;
+	grid-row-gap: 40px;
+}
+
+.main-form__button-wrap {
+	grid-column-end: span 2;
+	display: flex;
+	align-items: center;
+}
+
+.main-form__button {
+	margin-right: 30px;
+	flex-shrink: 0;
+}
+
+.main-form__form-text {
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 21px;
+	color: var(--color-dop);
+}
+
+.main-form__img {
+	flex: 50%;
+	background-image: url("../images/form.jpg");
+	background-position: center;
+	background-size: cover;
+	margin: 25px 25px 25px 0;
+	border-radius: 5px;
+}
+
+@media screen and (max-width: 1200px) {
+	.main-form__form {
+		grid-template-columns: 1fr;
+		grid-row-gap: 30px;
+	}
+
+	.main-form__button-wrap {
+		grid-column-end: span 1;
+	}
+}
+
+@media screen and (max-width: 960px) {
+	.main-form {
+		border: none;
+		margin: 0 0 - $content-padding;
+		flex-direction: column;
+	}
+
+	.main-form__body {
+		order: 2;
+		padding: 0 $content-padding;
+		flex: auto;
+	}
+
+	.main-form__img {
+		height: 200px;
+		order: 1;
+		flex: auto;
+		border-radius: 0;
+	}
+}
+
+@media screen and (max-width: 568px) {
+	.main-form__form {
+		grid-row-gap: 20px;
+	}
+
+	.main-form__button-wrap {
+		flex-direction: column;
+	}
+
+	.main-form__button {
+		margin-right: 0;
+		margin-bottom: 20px;
+		width: 100%;
+	}
+}
