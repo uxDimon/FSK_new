@@ -1,0 +1,120 @@
+@mixin udoli {
+	--color-main: #e94200;
+	--color-dop: #727272;
+	--color-main-back: #ffffff;
+	--color-dop-back: #f6f8fa;
+	--color-border: #e5e5e5;
+	--color-main-text: #000000;
+	--color-dop-text: #bebebe;
+	--color-cta: #80b918;
+	--color-error: #eb001b;
+	--color-alert: #ffdd2d;
+}
+
+@mixin center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+$content-max-weight: 1200px;
+$content-padding: 20px;
+
+.narrow-banner__wrap {
+	background-color: var(--color-dop-back);
+}
+
+.narrow-banner {
+	display: flex;
+	align-items: stretch;
+	min-height: 150px;
+}
+
+.narrow-banner__body {
+	position: relative;
+	padding: 10px 0;
+	background-color: var(--color-dop-back);
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	flex: 1 0 512px;
+	z-index: 2;
+}
+
+.narrow-banner__h {
+	font-weight: 600;
+	font-size: 25px;
+	line-height: 30px;
+	margin: 0 0 18px;
+}
+
+.narrow-banner__text p {
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 21px;
+	margin: 14px 0;
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.narrow-banner__angle {
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 100%;
+	width: 43px;
+	height: 100%;
+
+	svg {
+		position: absolute;
+		display: block;
+		top: 50%;
+		right: 0;
+		width: 220%;
+		height: auto;
+		transform: translateY(-50%);
+		--icon-color: var(--color-dop-back);
+		--icon-color-main: var(--color-dop);
+	}
+}
+
+.narrow-banner__img {
+	flex: 100%;
+	position: relative;
+	z-index: 1;
+	background-image: url("../images/narrow-banner.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 1240px) {
+	.narrow-banner__img {
+		margin-right: -20px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.narrow-banner__angle,
+	.narrow-banner__img {
+		display: none;
+	}
+
+	.narrow-banner__body {
+		flex: 1 1 100%;
+	}
+
+	.narrow-banner__h {
+		font-size: 20px;
+		line-height: 24px;
+		margin-bottom: 12px;
+	}
+}
