@@ -185,34 +185,24 @@ $content-padding: 20px;
 	width: 40px;
 	height: 40px;
 	border-radius: 40px;
-	background: transparent;
 	position: relative;
 	border: none;
 	cursor: pointer;
 	flex-shrink: 0;
-
-	&::after {
-		content: "";
-		position: absolute;
-		display: block;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		border-radius: inherit;
-		background: var(--color-main-back);
-		opacity: 0.7;
-		z-index: -1;
-	}
+	background: rgba(0, 0, 0, 0.5);
 
 	> svg {
 		display: block;
 		@include center();
-		--icon-color: var(--color-main-text);
+		--icon-color: #fff;
 	}
 
-	&:hover > svg {
-		--icon-color: var(--color-main);
+	&:hover {
+		background: rgba(0, 0, 0, 0.6);
+
+		> svg {
+			--icon-color: var(--color-main);
+		}
 	}
 }
 
@@ -225,6 +215,7 @@ $content-padding: 20px;
 }
 
 .main-slider__pagination {
+	display: block;
 	position: relative;
 	top: auto;
 	bottom: auto;
@@ -233,22 +224,10 @@ $content-padding: 20px;
 	font-size: 16px;
 	line-height: 19px;
 	margin-right: 22px;
-	padding: 2px 6px;
+	padding: 3px 6px 2px;
 	border-radius: 4px;
-
-	&::after {
-		content: "";
-		position: absolute;
-		display: block;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		border-radius: inherit;
-		background: var(--color-main-back);
-		opacity: 0.6;
-		z-index: -1;
-	}
+	background: rgba(0, 0, 0, 0.4);
+	color: #fff;
 
 	> .swiper-pagination-current {
 		font-weight: 600;
