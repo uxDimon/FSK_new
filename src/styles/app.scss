@@ -87,6 +87,16 @@ a {
 	}
 }
 
+p {
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
 // cont-block
 .cont-block__wrap {
 	display: flex;
@@ -142,6 +152,65 @@ a {
 	line-height: 36px;
 	color: var(--color-main-text);
 	margin: 0 0 24px;
+}
+
+// bread-cru
+.bread-cru__item {
+	display: inline-flex;
+	align-items: center;
+
+	&::after {
+		content: "";
+		width: 4px;
+		height: 4px;
+		border-radius: 4px;
+		background-color: var(--color-dop-text);
+		margin: 0 6px 0 10px;
+	}
+
+	&:last-child::after {
+		content: none;
+	}
+}
+
+.bread-cru__linc {
+	display: inline;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 19px;
+	color: var(--color-dop-text);
+	text-decoration: none;
+}
+
+a.bread-cru__linc:hover {
+	color: var(--color-main-text);
+}
+
+// text-list
+.text-list {
+	display: grid;
+	grid-row-gap: 12px;
+}
+
+.text-list__item {
+	position: relative;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 1.4;
+	padding: 0 0 0 20px;
+
+	&::before {
+		content: "";
+		display: block;
+		width: 6px;
+		height: 6px;
+		border-radius: 6px;
+		position: absolute;
+		top: 9px;
+		left: 4px;
+		background-color: var(--color-main);
+	}
 }
 
 // linc-icon
@@ -419,7 +488,9 @@ body.dark {
 @import "./common/narrow-banner.scss";
 @import "./common/main-icon-list.scss";
 @import "./common/main-form.scss";
+@import "./common/ru-map.scss";
 @import "./pages/index.scss";
+@import "./pages/okomp.scss";
 @import "./common/footer.scss";
 
 // @media screen and (max-width: 1274px) {

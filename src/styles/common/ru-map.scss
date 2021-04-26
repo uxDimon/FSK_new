@@ -1,0 +1,77 @@
+@mixin udoli {
+	--color-main: #e94200;
+	--color-dop: #727272;
+	--color-main-back: #ffffff;
+	--color-dop-back: #f6f8fa;
+	--color-border: #e5e5e5;
+	--color-main-text: #000000;
+	--color-dop-text: #bebebe;
+	--color-cta: #80b918;
+	--color-error: #eb001b;
+	--color-alert: #ffdd2d;
+}
+
+@mixin center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+$content-max-weight: 1200px;
+$content-padding: 20px;
+
+.ru-map__wrap {
+	overflow: hidden;
+}
+
+.ru-map {
+	display: flex;
+	align-items: center;
+}
+
+.ru-map__body {
+	flex: 1 0 420px;
+}
+
+.ru-map__h {
+	font-weight: 400;
+	font-size: 25px;
+	line-height: 30px;
+	margin: 0 0 26px;
+}
+
+.ru-map__map {
+	flex: 1 1 100%;
+	height: 480px;
+	position: relative;
+
+	> svg {
+		display: block;
+		width: auto;
+		height: inherit;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.ru-map__wrap {
+		margin-bottom: -70px;
+	}
+
+	.ru-map {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.ru-map__body,
+	.ru-map__map {
+		flex: auto;
+	}
+
+	.ru-map__map {
+		margin-top: -60px;
+	}
+}

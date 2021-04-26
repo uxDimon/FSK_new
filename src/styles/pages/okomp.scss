@@ -1,0 +1,84 @@
+@mixin udoli {
+	--color-main: #e94200;
+	--color-dop: #727272;
+	--color-main-back: #ffffff;
+	--color-dop-back: #f6f8fa;
+	--color-border: #e5e5e5;
+	--color-main-text: #000000;
+	--color-dop-text: #bebebe;
+	--color-cta: #80b918;
+	--color-error: #eb001b;
+	--color-alert: #ffdd2d;
+}
+
+@mixin center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+$content-max-weight: 1200px;
+$content-padding: 20px;
+
+.okomp-grey-logo__logo {
+	width: 100%;
+	height: 300px;
+	border-radius: 5px;
+	background-color: var(--color-dop-back);
+	background-image: url("../images/fsk_logo-2.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-bottom: 30px;
+}
+
+.okomp-grey-logo__text {
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 21px;
+
+	> p {
+		margin: 20px 0;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.okomp-grey-logo__logo {
+		width: 100vw;
+		margin: 0 0 - $content-padding 24px;
+		margin-bottom: 24px;
+		border-radius: 0;
+	}
+}
+
+.main-utp_okomp {
+	.main-utp__item:first-child {
+		grid-row-end: span 1;
+		flex-direction: row;
+
+		.main-utp__h {
+			margin-right: 22px;
+			margin-bottom: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.main-utp_okomp {
+		.main-utp__item:first-child {
+			flex-shrink: 0;
+			margin-right: 35px;
+			flex-direction: column;
+
+			&:last-child {
+				margin-right: 0;
+				padding-right: $content-padding;
+			}
+
+			.main-utp__h {
+				margin-right: 0;
+				margin-bottom: 6px;
+			}
+		}
+	}
+}

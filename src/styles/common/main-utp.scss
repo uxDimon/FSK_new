@@ -23,7 +23,7 @@ $content-padding: 20px;
 
 .main-utp__list {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(3, auto);
 	grid-gap: 20px;
 	justify-content: space-between;
 }
@@ -39,6 +39,7 @@ $content-padding: 20px;
 	line-height: 50px;
 	color: var(--color-main);
 	margin-right: 22px;
+	white-space: nowrap;
 }
 
 .main-utp__text {
