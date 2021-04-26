@@ -154,6 +154,25 @@ p {
 	margin: 0 0 24px;
 }
 
+.cont-block__button-wrap {
+	display: grid;
+	grid-auto-flow: column;
+	grid-gap: 24px;
+	justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+	.cont-block__h {
+		font-size: 25px;
+		line-height: 30px;
+	}
+
+	.cont-block__button-wrap {
+		grid-auto-flow: row;
+		justify-content: stretch;
+	}
+}
+
 // bread-cru
 .bread-cru__item {
 	display: inline-flex;
@@ -472,6 +491,24 @@ body.dark {
 	}
 }
 
+.button_ghost {
+	color: var(--color-main);
+	background-color: transparent;
+	border: 1px solid var(--color-main);
+	transition: background 150ms ease-in-out 0ms;
+
+	&:hover {
+		background-color: var(--color-main);
+		color: #ffffff;
+		box-shadow: none;
+	}
+}
+.dark {
+	.button_ghost {
+		color: var(--color-main-text);
+	}
+}
+
 // // //
 .color-main {
 	color: var(--color-main);
@@ -489,6 +526,7 @@ body.dark {
 @import "./common/main-icon-list.scss";
 @import "./common/main-form.scss";
 @import "./common/ru-map.scss";
+@import "./common/cards.scss";
 @import "./pages/index.scss";
 @import "./pages/okomp.scss";
 @import "./common/footer.scss";
