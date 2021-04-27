@@ -74,3 +74,14 @@ for (const buttonActive of document.querySelectorAll(".button:not(.button.button
 		buttonActive.insertAdjacentHTML("afterbegin", buttonEffectHtml);
 	});
 }
+
+// data-doc-card
+document.querySelectorAll(".doc-card__card[data-doc-card]").forEach((docCard, key, docCardList) => {
+	const button = docCard.querySelector("buttom.doc-card__button");
+	button.addEventListener("click", () => {
+		for (const item of docCardList) {
+			if (item !== docCard) item.classList.remove(activeClass);
+		}
+		docCard.classList.toggle(activeClass);
+	});
+});
