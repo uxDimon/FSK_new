@@ -36,7 +36,7 @@ $content-padding: 20px;
 	}
 }
 
-.card-main__linc {
+.card-main__link {
 	display: grid;
 	grid-template-rows: 1fr 100px;
 	width: 100%;
@@ -104,7 +104,7 @@ $content-padding: 20px;
 	transition: opacity 250ms ease-in-out 0ms;
 }
 
-.card-main__linc:hover {
+.card-main__link:hover {
 	color: var(--color-main-text);
 
 	.card-main__img-wrap::after,
@@ -201,7 +201,7 @@ $content-padding: 20px;
 		grid-auto-rows: 270px;
 	}
 
-	.card-main__linc {
+	.card-main__link {
 		grid-template-rows: 1fr 80px;
 	}
 

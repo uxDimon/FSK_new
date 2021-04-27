@@ -1,0 +1,317 @@
+extends ../template
+
+block variables
+    - var title = 'Документация'
+    - var contactForm = true
+
+block content
+    main
+        .cont-block__wrap 
+            .cont-block.cont-block_m30
+                h1.cont-block__h1 Документация
+                ul.bread-cru 
+                    li.bread-cru__item 
+                        a(href="#").bread-cru__link Главная
+                    li.bread-cru__item 
+                        .bread-cru__link Документация
+
+        .cont-block__wrap 
+            .cont-block.head-block.cont-block_mb30        
+                .head-block__img(style="background-image: url(./assets/images/docs.jpg);") 
+                .head-block__text 
+                    p ГК ФСК – одна из крупнейших системообразующих строительных компаний России. Мы предлагаем коммерческие площади в жилых комплексах разной степени готовности. Все помещения свободного назначения, высота потолков до 4 метров, с отдельным входом (со двора и/или с улицы). Метраж доступных помещений от 51 м2 до 146 м2.
+
+        //- .cont-block__wrap
+            .cont-block
+        .cont-block__wrap
+            .cont-block.cont-block_m70
+                .baner-angle
+                    .baner-angle__body 
+                        h3.baner-angle__h UP-квартал "Пушкинский"
+                        .baner-angle__text Официальная документация по проекту
+                        .baner-angle__angle
+                            svg(width="84" height="450")
+                                use(xlink:href="./assets/images/sprite.svg#slider-arrow")
+
+                    .baner-angle__img(style="background-image: url(./assets/images/img-02.jpg);")
+
+                ul.doc-card 
+                    li.doc-card__item
+                        .doc-card__card(data-doc-card) 
+                            .doc-card__text Документы на земельный участок
+                            buttom.doc-card__button 
+                                svg(width="16" height="16")
+                                    use(xlink:href="./assets/images/sprite.svg#list")
+                                | Смотреть документы
+
+                            ul.doc-card__list 
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+
+                    li.doc-card__item 
+                        .doc-card__card(data-doc-card)
+                            .doc-card__text Документы на земельный участок
+                            buttom.doc-card__button 
+                                svg(width="16" height="16")
+                                    use(xlink:href="./assets/images/sprite.svg#list")
+                                | Смотреть документы
+
+                            ul.doc-card__list 
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                    li.doc-card__item
+                        .doc-card__card(data-doc-card) 
+                            .doc-card__text Документы на земельный участок
+                            buttom.doc-card__button 
+                                svg(width="16" height="16")
+                                    use(xlink:href="./assets/images/sprite.svg#list")
+                                | Смотреть документы
+
+                            ul.doc-card__list 
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+
+                    li.doc-card__item 
+                        .doc-card__card(data-doc-card)
+                            .doc-card__text Документы на земельный участок
+                            buttom.doc-card__button 
+                                svg(width="16" height="16")
+                                    use(xlink:href="./assets/images/sprite.svg#list")
+                                | Смотреть документы
+
+                            ul.doc-card__list 
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                    li.doc-card__item
+                        .doc-card__card(data-doc-card) 
+                            .doc-card__text Документы на земельный участок
+                            buttom.doc-card__button 
+                                svg(width="16" height="16")
+                                    use(xlink:href="./assets/images/sprite.svg#list")
+                                | Смотреть документы
+
+                            ul.doc-card__list 
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+
+                    li.doc-card__item 
+                        .doc-card__card(data-doc-card)
+                            .doc-card__text Документы на земельный участок
+                            buttom.doc-card__button 
+                                svg(width="16" height="16")
+                                    use(xlink:href="./assets/images/sprite.svg#list")
+                                | Смотреть документы
+
+                            ul.doc-card__list 
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+
+                    li.doc-card__item 
+                        .doc-card__card(data-doc-card)
+                            .doc-card__text Документы на земельный участок
+                            buttom.doc-card__button 
+                                svg(width="16" height="16")
+                                    use(xlink:href="./assets/images/sprite.svg#list")
+                                | Смотреть документы
+
+                            ul.doc-card__list 
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+        .cont-block__wrap
+            .cont-block.cont-block_m70
+                .baner-angle
+                    .baner-angle__body 
+                        h3.baner-angle__h Best Western Space Hotel
+                        .baner-angle__text Официальная документация по проекту
+                        .baner-angle__angle
+                            svg(width="84" height="450")
+                                use(xlink:href="./assets/images/sprite.svg#slider-arrow")
+
+                    .baner-angle__img(style="background-image: url(./assets/images/img-01.jpg);")
+
+                ul.doc-card 
+                    li.doc-card__item
+                        .doc-card__card(data-doc-card) 
+                            .doc-card__text Документы на земельный участок
+                            buttom.doc-card__button 
+                                svg(width="16" height="16")
+                                    use(xlink:href="./assets/images/sprite.svg#list")
+                                | Смотреть документы
+
+                            ul.doc-card__list 
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+
+                    li.doc-card__item 
+                        .doc-card__card(data-doc-card)
+                            .doc-card__text Документы на земельный участок
+                            buttom.doc-card__button 
+                                svg(width="16" height="16")
+                                    use(xlink:href="./assets/images/sprite.svg#list")
+                                | Смотреть документы
+
+                            ul.doc-card__list 
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                    li.doc-card__item
+                        .doc-card__card(data-doc-card) 
+                            .doc-card__text Документы на земельный участок
+                            buttom.doc-card__button 
+                                svg(width="16" height="16")
+                                    use(xlink:href="./assets/images/sprite.svg#list")
+                                | Смотреть документы
+
+                            ul.doc-card__list 
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+
+                    li.doc-card__item 
+                        .doc-card__card(data-doc-card)
+                            .doc-card__text Документы на земельный участок
+                            buttom.doc-card__button 
+                                svg(width="16" height="16")
+                                    use(xlink:href="./assets/images/sprite.svg#list")
+                                | Смотреть документы
+
+                            ul.doc-card__list 
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                    li.doc-card__item
+                        .doc-card__card(data-doc-card) 
+                            .doc-card__text Документы на земельный участок
+                            buttom.doc-card__button 
+                                svg(width="16" height="16")
+                                    use(xlink:href="./assets/images/sprite.svg#list")
+                                | Смотреть документы
+
+                            ul.doc-card__list 
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+
+                    li.doc-card__item 
+                        .doc-card__card(data-doc-card)
+                            .doc-card__text Документы на земельный участок
+                            buttom.doc-card__button 
+                                svg(width="16" height="16")
+                                    use(xlink:href="./assets/images/sprite.svg#list")
+                                | Смотреть документы
+
+                            ul.doc-card__list 
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+
+                    li.doc-card__item 
+                        .doc-card__card(data-doc-card)
+                            .doc-card__text Документы на земельный участок
+                            buttom.doc-card__button 
+                                svg(width="16" height="16")
+                                    use(xlink:href="./assets/images/sprite.svg#list")
+                                | Смотреть документы
+
+                            ul.doc-card__list 
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок
+                                li.doc-card__list-item 
+                                    a(href="#").doc-card__link Документы на земельный участок

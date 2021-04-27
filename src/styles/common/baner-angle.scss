@@ -1,0 +1,110 @@
+@mixin udoli {
+	--color-main: #e94200;
+	--color-dop: #727272;
+	--color-main-back: #ffffff;
+	--color-dop-back: #f6f8fa;
+	--color-border: #e5e5e5;
+	--color-main-text: #000000;
+	--color-dop-text: #bebebe;
+	--color-cta: #80b918;
+	--color-error: #eb001b;
+	--color-alert: #ffdd2d;
+}
+
+@mixin center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+$content-max-weight: 1200px;
+$content-padding: 20px;
+
+.baner-angle {
+	border: 1px solid var(--color-border);
+	border-radius: 5px;
+	display: flex;
+	align-items: stretch;
+	min-height: 150px;
+	overflow: hidden;
+}
+
+.baner-angle__body {
+	padding: 24px 0 24px 48px;
+	flex: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: relative;
+}
+
+.baner-angle__h {
+	font-weight: normal;
+	font-size: 25px;
+	line-height: 30px;
+	margin: 0;
+	order: 2;
+}
+
+.baner-angle__text {
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 17px;
+	margin-bottom: 4px;
+	color: var(--color-dop);
+	order: 1;
+}
+
+.baner-angle__angle {
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 100%;
+	width: 43px;
+	height: 100%;
+
+	svg {
+		position: absolute;
+		display: block;
+		top: 50%;
+		right: 0;
+		width: 220%;
+		height: auto;
+		transform: translateY(-50%);
+		--icon-color: var(--color-main-back);
+		--icon-color-main: rgba(0, 0, 0, 0);
+	}
+}
+
+.baner-angle__img {
+	flex: 50%;
+	background-image: url("../images/img-01.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 826px) {
+	.baner-angle {
+		flex-direction: column;
+	}
+
+	.baner-angle__body {
+		flex: auto;
+		padding: 18px;
+		order: 2;
+	}
+
+	.baner-angle__h {
+		font-size: 20px;
+		line-height: 24px;
+	}
+
+	.baner-angle__img {
+		flex: auto;
+		width: 100%;
+		height: 120px;
+		order: 1;
+	}
+}
