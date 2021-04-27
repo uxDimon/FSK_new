@@ -1323,6 +1323,42 @@ body.dark .button-zoom svg {
     background-color: var(--metro-color, #0645ad);
     margin-right: 7px; }
 
+@media screen and (max-width: 960px) {
+  .card-ready-poj {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media screen and (max-width: 520px) {
+  .card-ready-poj {
+    grid-template-columns: 1fr; } }
+
+.card-soc {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 24px;
+  margin-bottom: 30px; }
+
+.card-soc__img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 350px;
+  border-radius: 5px;
+  margin-bottom: 14px; }
+
+.card-soc__text {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px; }
+
+@media screen and (max-width: 960px) {
+  .card-soc {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media screen and (max-width: 520px) {
+  .card-soc {
+    grid-template-columns: 1fr; } }
+
 .okomp-grey-logo__logo {
   width: 100%;
   height: 300px;
