@@ -1,0 +1,105 @@
+@mixin udoli {
+	--color-main: #e94200;
+	--color-dop: #727272;
+	--color-main-back: #ffffff;
+	--color-dop-back: #f6f8fa;
+	--color-border: #e5e5e5;
+	--color-main-text: #000000;
+	--color-dop-text: #bebebe;
+	--color-cta: #80b918;
+	--color-error: #eb001b;
+	--color-alert: #ffdd2d;
+}
+
+@mixin center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+$content-max-weight: 1200px;
+$content-padding: 20px;
+
+.klient-text {
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 21px;
+
+	> h4,
+	> h3,
+	> h2 {
+		font-weight: 600;
+		font-size: inherit;
+		line-height: inherit;
+		margin: 0;
+		order: 3;
+	}
+
+	ul {
+		margin-bottom: 21px;
+		order: 3;
+	}
+}
+
+.klient-text__first {
+	margin: 0 0 21px;
+	order: 1;
+}
+
+.klient-text__baner {
+	overflow: hidden;
+	border: 1px solid var(--color-border);
+	border-radius: 5px;
+	width: 100%;
+	max-width: 380px;
+	float: right;
+	display: inline-block;
+	margin: 0 0 24px 24px;
+	order: 2;
+}
+
+.klient-text__baner-img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+}
+
+.klient-text__baner-body {
+	padding: 25px 30px;
+}
+
+.klient-text__baner-h {
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 24px;
+	margin: 0 0 12px;
+}
+
+.klient-text__baner-text {
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 21px;
+	margin: 12px 0;
+}
+
+.klient-text__baner-link {
+	margin-top: 4px;
+	width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+	.klient-text {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.klient-text__baner {
+		margin-left: 0;
+		align-self: center;
+	}
+
+	.klient-text__baner-body {
+		padding: 20px;
+	}
+}
