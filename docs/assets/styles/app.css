@@ -1568,6 +1568,126 @@ body.dark .button-zoom svg {
   .doc-card {
     grid-template-columns: 1fr; } }
 
+.help-faq {
+  border: 1px solid var(--color-border);
+  border-radius: 5px; }
+
+.help-faq-item {
+  overflow: hidden;
+  border-bottom: 1px solid var(--color-border); }
+  .help-faq-item:last-child {
+    border-bottom: none; }
+
+.help-faq-item__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 50px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  color: var(--color-main-text);
+  padding: 12px 24px;
+  cursor: pointer; }
+
+.help-faq-item__button {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  border: 1px solid var(--color-main); }
+  .help-faq-item__button svg {
+    display: block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    --icon-color: var(--color-main-text);
+    transition: transform 200ms ease-in-out 0ms; }
+
+.help-faq-item.active .help-faq-item__button svg {
+  transform: translate(-50%, -50%) rotate(-180deg); }
+
+.help-faq-item__body {
+  padding: 0 24px;
+  display: block; }
+  .help-faq-item__body p {
+    margin: 0;
+    padding: 0 0 12px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 21px;
+    color: var(--color-main-text); }
+
+@media screen and (max-width: 767px) {
+  .help-faq-item__head {
+    padding: 12px 16px; }
+  .help-faq-item__button {
+    min-width: 20px;
+    margin-left: 10px; } }
+
+.download-list__input-wrap {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 24px;
+  justify-content: end;
+  margin-bottom: 30px; }
+
+.download-list__list {
+  border: 1px solid var(--color-border);
+  border-radius: 5px; }
+
+.download-list__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 50px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  color: var(--color-main-text);
+  padding: 12px 24px;
+  border-bottom: 1px solid var(--color-border); }
+  .download-list__item:last-child {
+    border-bottom: none; }
+
+.linc-arrow {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: var(--color-main-text);
+  text-decoration: none; }
+
+.linc-arrow__icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  border: 1px solid var(--color-main);
+  position: relative;
+  margin-left: 10px; }
+  .linc-arrow__icon svg {
+    --icon-color: var(--color-main-text);
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: auto; }
+
+.linc-arrow__icon_down svg {
+  transform: translate(-50%, -50%) rotate(90deg); }
+
+@media screen and (max-width: 767px) {
+  .download-list__item {
+    padding: 12px 16px; } }
+
+@media screen and (max-width: 520px) {
+  .linc-arrow__text {
+    display: none; } }
+
 .main-utp_okomp .main-utp__item:first-child {
   grid-row-end: span 1;
   flex-direction: row; }
@@ -1586,3 +1706,69 @@ body.dark .button-zoom svg {
     .main-utp_okomp .main-utp__item:first-child .main-utp__h {
       margin-right: 0;
       margin-bottom: 6px; } }
+
+.klient-text {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px; }
+  .klient-text > h4,
+  .klient-text > h3,
+  .klient-text > h2 {
+    font-weight: 600;
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0;
+    order: 3; }
+  .klient-text ul {
+    margin-bottom: 21px;
+    order: 3; }
+
+.klient-text__first {
+  margin: 0 0 21px;
+  order: 1; }
+
+.klient-text__baner {
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: 5px;
+  width: 100%;
+  max-width: 380px;
+  float: right;
+  display: inline-block;
+  margin: 0 0 24px 24px;
+  order: 2; }
+
+.klient-text__baner-img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover; }
+
+.klient-text__baner-body {
+  padding: 25px 30px; }
+
+.klient-text__baner-h {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0 0 12px; }
+
+.klient-text__baner-text {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  margin: 12px 0; }
+
+.klient-text__baner-link {
+  margin-top: 4px;
+  width: 100%; }
+
+@media screen and (max-width: 768px) {
+  .klient-text {
+    display: flex;
+    flex-direction: column; }
+  .klient-text__baner {
+    margin-left: 0;
+    align-self: center; }
+  .klient-text__baner-body {
+    padding: 20px; } }
