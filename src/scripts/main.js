@@ -100,3 +100,63 @@ if (helpFaqList) {
 		});
 	}
 }
+
+// dual-range
+class Range {
+	constructor(rangeWrap) {
+		this.atr = JSON.parse(rangeWrap.dataset.dualRange);
+		this.inputs = [];
+		this.value = {
+			from: this.atr.min,
+			to: this.atr.max,
+		};
+		this.maxRange = +this.atr.max - +this.atr.min;
+		this.created(rangeWrap);
+		this.getValueInput();
+	}
+	getValueInput() {
+		for (const input of this.inputs) {
+			input.item.value = input.course === "from" ? this.value.from : this.value.to;
+		}
+	}
+	created(rangeWrap) {
+		for (const elemInput of rangeWrap.querySelectorAll("input[data-course]")) {
+			this.inputs.push({
+				item: elemInput,
+				type: elemInput.dataset.type,
+				course: elemInput.dataset.course,
+			});
+		}
+		for (const input of this.inputs) {
+			for (const key in this.atr) {
+				if (Object.hasOwnProperty.call(this.atr, key)) input.item.setAttribute(key, this.atr[key]);
+			}
+			input.item.addEventListener("input", () => {
+				this.value[input.course] = Number(input.item.value);
+				if (input.course === "from" && this.value.from > this.value.to) {
+					this.value.to = this.value.from;
+				} else if (this.value.to < this.value.from) {
+					this.value.from = this.value.to;
+				}
+				const inputValue = +input.item.value - +this.atr.min,
+					data = {
+						from: {
+							position: (inputValue / this.maxRange) * 100,
+							cssProperty: "--range-line-from",
+						},
+						to: {
+							position: 100 - (inputValue / this.maxRange) * 100,
+							cssProperty: "--range-line-to",
+						},
+					}[input.course];
+
+				rangeWrap.style.setProperty(data.cssProperty, data.position + "%");
+				this.getValueInput();
+			});
+		}
+	}
+}
+
+for (const rangeWrap of document.querySelectorAll("[data-dual-range]")) {
+	new Range(rangeWrap);
+}

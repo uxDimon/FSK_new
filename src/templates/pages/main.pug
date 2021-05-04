@@ -78,6 +78,139 @@ block content
                             .main-utp__h 775
                             .main-utp__text тыс. м² введено <br>в эксплуатацию в 2020 году
 
+        // Подобрать объект
+        .cont-block__wrap.cont-block_m70
+            .cont-block
+                h2.cont-block__h Подобрать объект
+
+                .filter-m 
+                    ul.filter-m__head 
+                        li.filter-m__head-button-wrap
+                            label.filter-m__head-button
+                                input(type="radio" name="filter-head-button" checked).filter-m__head-button-input
+                                .filter-m__head-button-text Квартиры и апартаменты
+                        li.filter-m__head-button-wrap
+                            label.filter-m__head-button
+                                input(type="radio" name="filter-head-button").filter-m__head-button-input
+                                .filter-m__head-button-text Коммерческие помещения
+                        li.filter-m__head-button-wrap
+                            label.filter-m__head-button
+                                input(type="radio" name="filter-head-button").filter-m__head-button-input
+                                .filter-m__head-button-text Паркинги
+                        li.filter-m__head-button-wrap
+                            label.filter-m__head-button
+                                input(type="radio" name="filter-head-button").filter-m__head-button-input
+                                .filter-m__head-button-text Кладовые
+
+                    .filter-m__body 
+                        .filter-m__body-line 
+                            .multi-select
+                                .multi-select__name Количество комнат
+                                ul.multi-select__body 
+                                    li.multi-select__item 
+                                        label.multi-select__buttn
+                                            input(type="checkbox" name="rooms").multi-select__input
+                                            .multi-select__text С
+                                    li.multi-select__item 
+                                        label.multi-select__buttn
+                                            input(type="checkbox" name="rooms").multi-select__input
+                                            .multi-select__text 1
+                                    li.multi-select__item 
+                                        label.multi-select__buttn
+                                            input(type="checkbox" name="rooms").multi-select__input
+                                            .multi-select__text 2
+                                    li.multi-select__item 
+                                        label.multi-select__buttn
+                                            input(type="checkbox" name="rooms").multi-select__input
+                                            .multi-select__text 3
+                            .multi-select
+                                .multi-select__name
+                                ul.multi-select__body 
+                                    li.multi-select__item 
+                                        label.multi-select__buttn
+                                            input(type="checkbox" name="rooms").multi-select__input
+                                            .multi-select__text Евро
+
+                            .dual-range(data-dual-range='{"min":"3.1","max":"16.7","step":"0.1"}').filter-m__body_dual-range
+                                .dual-range__name Стоимость, млн ₽
+                                .dual-range__body 
+                                    label.dual-range__input 
+                                        input(type="number" name="" data-course='from' data-type='number').dual-range__input-input
+                                        .dual-range__input-text от
+                                        svg(width="12" height="52").dual-range__input-icon
+                                            use(xlink:href="./assets/images/sprite.svg#dual-range")                                        
+                                    label.dual-range__input 
+                                        input(type="number" name="" data-course='to' data-type='number').dual-range__input-input
+                                        .dual-range__input-text до
+                                    .dual-range__body-progres
+                                    input(type="range" name="" data-course='from' data-type='range').dual-range__range
+                                    input(type="range" name="" data-course='to' data-type='range').dual-range__range
+
+                            .dual-range(data-dual-range='{"min":"21","max":"145.5","step":"0.5"}').filter-m__body_dual-range
+                                .dual-range__name Площадь, м²
+                                .dual-range__body 
+                                    label.dual-range__input 
+                                        input(type="number" name="" data-course='from' data-type='number').dual-range__input-input
+                                        .dual-range__input-text от
+                                        svg(width="12" height="52").dual-range__input-icon
+                                            use(xlink:href="./assets/images/sprite.svg#dual-range")                                        
+                                    label.dual-range__input 
+                                        input(type="number" name="" data-course='to' data-type='number').dual-range__input-input
+                                        .dual-range__input-text до
+                                    .dual-range__body-progres
+                                    input(type="range" name="" data-course='from' data-type='range').dual-range__range
+                                    input(type="range" name="" data-course='to' data-type='range').dual-range__range
+
+                            lable.input.filter-m__body_input
+                                .input__name Готовность до
+                                select(name="").input__input
+                                    option(value="1") Любой
+                                    option(value="2") Любой3
+                                    option(value="3") Любой2
+
+                        .filter-m__body-line.filter-m__body-line_extra
+                            .dual-range(data-dual-range='{"min":"5","max":"50","step":"1"}').filter-m__body_dual-range
+                                .dual-range__name Кухня, м2
+                                .dual-range__body 
+                                    label.dual-range__input 
+                                        input(type="number" name="" data-course='from' data-type='number').dual-range__input-input
+                                        .dual-range__input-text от
+                                        svg(width="12" height="52").dual-range__input-icon
+                                            use(xlink:href="./assets/images/sprite.svg#dual-range")                                        
+                                    label.dual-range__input 
+                                        input(type="number" name="" data-course='to' data-type='number').dual-range__input-input
+                                        .dual-range__input-text до
+                                    .dual-range__body-progres
+                                    input(type="range" name="" data-course='from' data-type='range').dual-range__range
+                                    input(type="range" name="" data-course='to' data-type='range').dual-range__range
+
+                            .dual-range(data-dual-range='{"min":"5","max":"50","step":"1"}').filter-m__body_dual-range
+                                .dual-range__name Этаж
+                                .dual-range__body 
+                                    label.dual-range__input 
+                                        input(type="number" name="" data-course='from' data-type='number').dual-range__input-input
+                                        .dual-range__input-text от
+                                        svg(width="12" height="52").dual-range__input-icon
+                                            use(xlink:href="./assets/images/sprite.svg#dual-range")                                        
+                                    label.dual-range__input 
+                                        input(type="number" name="" data-course='to' data-type='number').dual-range__input-input
+                                        .dual-range__input-text до
+                                    .dual-range__body-progres
+                                    input(type="range" name="" data-course='from' data-type='range').dual-range__range
+                                    input(type="range" name="" data-course='to' data-type='range').dual-range__range
+
+                            lable.input.filter-m__body_input
+                                .input__name Корпус (если есть)
+                                select(name="").input__input
+                                    option(value="1") Любой
+                                    option(value="2") Любой3
+                                    option(value="3") Любой2
+
+                            lable.input.filter-m__body_input
+                                .input__name Номер квартиры
+                                input(type="text" name="" placeholder="Номер квартиры").input__input
+                                .input__error Поле указано не верно  
+
         // Проекты в продаже
         .cont-block__wrap.cont-block_m70
             .cont-block
