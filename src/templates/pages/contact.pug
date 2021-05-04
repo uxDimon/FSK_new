@@ -1,0 +1,27 @@
+extends ../template
+
+block variables
+    - var title = 'Контакты'
+    - var contactForm = false
+
+block content
+    main
+        .cont-block__wrap 
+            .cont-block.cont-block_m30
+                h1.cont-block__h1 Контакты
+                ul.bread-cru 
+                    li.bread-cru__item 
+                        a(href="#").bread-cru__link Главная
+                    li.bread-cru__item 
+                        .bread-cru__link Контакты
+
+        //- .cont-block__wrap
+            .cont-block
+        .cont-block__wrap
+            .cont-block
+                ul.contact-map
+                    li.contact-map__item 
+                        .contact-map__body 
+                            h3.contact-map__h 
+
+                        .contact-map__map
