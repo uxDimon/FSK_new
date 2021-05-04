@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Главная</title>
+    <title>404</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,22 +15,15 @@
   </head>
   <body class="dark">
     <header></header>
-    <main>
-      <div class="cont-block__wrap"> 
-        <div class="cont-block cont-block_m70">
-          <ul style="display: grid; grid-row-gap: 12px; font-weight: 300; font-size: 18px;">
-            <li> <a href="main.html">Главная </a></li>
-            <li> <a href="okorp.html">О компании</a></li>
-            <li> <a href="klient.html">Клиентский сервис</a></li>
-            <li> <a href="docs.html">Документация</a></li>
-            <li> <a href="akcii.html">Акции и скидки</a></li>
-            <li> <a href="press.html">Пресс-центр</a></li>
-            <li> <a href="park.html">Паркинг</a></li>
-            <li> <a href="clad.html">Кладовые помещения</a></li>
-            <li> <a href="comers.html">Коммерческие помещения</a></li>
-            <li> <a href="404.html">404</a></li>
-          </ul>
-        </div>
+    <main class="not-found__wrap"> 
+      <div class="not-found">
+        <svg class="not-found__logo" width="96" height="32" data-logo>
+          <use xlink:href="./assets/images/sprite.svg#main-logo"></use>
+        </svg>
+        <svg class="not-found__404" width="396" height="207" data-logo>
+          <use xlink:href="./assets/images/sprite.svg#404"></use>
+        </svg>
+        <div class="not-found__button-warap"><a class="button button_ghost" href="#" title="Объекты">Объекты</a><a class="button" href="#" title="Отправить заявку">Отправить заявку</a></div>
       </div>
     </main>
     <footer></footer>
