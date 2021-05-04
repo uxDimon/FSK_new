@@ -1,0 +1,18 @@
+extends ../template
+
+block variables
+    - var title = '404'
+    - var contactForm = false
+
+block content
+    main.not-found__wrap 
+        .not-found
+            svg(width="96" height="32" data-logo).not-found__logo
+                use(xlink:href="./assets/images/sprite.svg#main-logo")
+
+            svg(width="396" height="207" data-logo).not-found__404
+                use(xlink:href="./assets/images/sprite.svg#404")
+
+            .not-found__button-warap
+                a(href="#" title="Объекты").button.button_ghost Объекты
+                a(href="#" title="Отправить заявку").button Отправить заявку
