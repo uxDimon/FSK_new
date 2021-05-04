@@ -1,0 +1,21 @@
+extends ../template
+
+block variables
+    - var title = 'Best Western Space Hotel'
+    - var contactForm = false
+
+block content
+    main
+        .cont-block__wrap 
+            .cont-block.cont-block_m30
+                h1.cont-block__h1 Best Western Space Hotel 
+                ul.bread-cru 
+                    li.bread-cru__item 
+                        a(href="#").bread-cru__link Главная
+                    li.bread-cru__item 
+                        a(href="#").bread-cru__link Объекты
+                    li.bread-cru__item 
+                        .bread-cru__link Best Western Space Hotel 
+
+        //- .cont-block__wrap
+            .cont-block.cont-block_mb70

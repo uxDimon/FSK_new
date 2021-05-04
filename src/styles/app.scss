@@ -208,6 +208,52 @@ p {
 	}
 }
 
+// head-block-card
+.head-block-card {
+	margin-bottom: 30px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 24px;
+}
+
+.head-block-card__item {
+	border: 1px solid var(--color-border);
+	border-radius: 5px;
+	padding: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.head-block-card__icon {
+	flex-shrink: 0;
+	--icon-color: var(--color-main-text);
+	display: block;
+	margin-right: 16px;
+}
+
+.head-block-card__text {
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 21px;
+}
+
+@media screen and (max-width: 1130px) {
+	.head-block-card {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.head-block-card__item {
+		padding: 16px;
+	}
+}
+
+@media screen and (max-width: 620px) {
+	.head-block-card {
+		grid-template-columns: 1fr;
+	}
+}
+
 // bread-cru
 .bread-cru__item {
 	display: inline-flex;

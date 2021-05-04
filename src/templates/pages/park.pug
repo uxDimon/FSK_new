@@ -1,0 +1,49 @@
+extends ../template
+
+block variables
+    - var title = 'Паркинг'
+    - var contactForm = true
+
+block content
+    main
+        .cont-block__wrap 
+            .cont-block.cont-block_m30
+                h1.cont-block__h1 Паркинг
+                ul.bread-cru 
+                    li.bread-cru__item 
+                        a(href="#").bread-cru__link Главная
+                    li.bread-cru__item 
+                        .bread-cru__link Паркинг
+
+        .cont-block__wrap 
+            .cont-block.head-block
+                .head-block__logo(style="background-image: url(./assets/images/park.jpg);") 
+                .head-block__text 
+                    p 
+                        | ГК ФСК – одна из крупнейших системообразующих строительных компаний России. Мы предлагаем коммерческие площади в жилых комплексах разной степени готовности. Все помещения свободного назначения, высота потолков до 4 метров, с отдельным входом (со двора и/или с улицы). Метраж доступных помещений от 
+                        span.color-main %51% 
+                        | м2 до 
+                        span.color-main %146%
+                        |  м2.
+
+                ul.head-block-card
+                    li.head-block-card__item 
+                        svg(width="45" height="45").head-block-card__icon
+                            use(xlink:href="./assets/images/sprite.svg#hd-doc")
+                        .head-block-card__text Формат помещений под любой бизнес
+                    li.head-block-card__item 
+                        svg(width="45" height="45").head-block-card__icon
+                            use(xlink:href="./assets/images/sprite.svg#hd-percent")
+                        .head-block-card__text В густонаселенных жилых кварталах
+                    li.head-block-card__item 
+                        svg(width="45" height="45").head-block-card__icon
+                            use(xlink:href="./assets/images/sprite.svg#hd-calendar")
+                        .head-block-card__text Формат помещений под любой бизнес
+                    li.head-block-card__item 
+                        svg(width="45" height="45").head-block-card__icon
+                            use(xlink:href="./assets/images/sprite.svg#hd-signature")
+                        .head-block-card__text В густонаселенных жилых кварталах
+
+
+
+
