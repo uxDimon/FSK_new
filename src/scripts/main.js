@@ -157,6 +157,55 @@ class Range {
 	}
 }
 
-for (const rangeWrap of document.querySelectorAll("[data-dual-range]")) {
-	new Range(rangeWrap);
+for (const rangeWrap of document.querySelectorAll("[data-dual-range]")) new Range(rangeWrap);
+
+// Контакты map
+class ContactMap {
+	constructor(item) {
+		this.coord = item.dataset.contactMap.split(", ");
+		this.map = item.querySelector(".contact-map__map");
+		this.title = item.querySelector(".contact-map__h").innerText;
+		this.created();
+	}
+	created() {
+		this.coord = this.coord.map((item) => Number(item));
+		ymaps.ready(() => {
+			let myMap = new ymaps.Map(this.map, {
+					center: this.coord,
+					zoom: 13,
+					controls: [],
+				}),
+				MyIcon = ymaps.templateLayoutFactory.createClass(
+					// Макет иконки
+					'<svg class="contact-map__icon-map" width="53" height="58" fill="none" viewBox="0 0 53 58"  xmlns="http://www.w3.org/2000/svg"><path d="M26.5 53C41.136 53 53 41.136 53 26.5S41.136 0 26.5 0 0 11.864 0 26.5 11.864 53 26.5 53z" fill="#FC4C02"/><path d="M33.88 50.44L26.44 43 19 50.44l7.44 7.44 7.44-7.44z" fill="#FC4C02"/><path d="M21.52 19.087h22.46a19.888 19.888 0 00-11.742-10.72L21.52 19.087z" fill="#fff"/><path d="M45.102 21.764H18.615c-.604 0-1.18-.385-1.412-.944a1.556 1.556 0 01.332-1.666l11.65-11.649A19.184 19.184 0 007.768 30.637h26.765c.604 0 1.18.385 1.41.944a1.558 1.558 0 01-.33 1.665l-12.197 12.2a19.2 19.2 0 0021.682-23.682h.004z" fill="#fff"/><path d="M31.637 33.29H8.757a19.893 19.893 0 0011.652 11.228L31.637 33.29z" fill="#fff"/></svg>'
+				),
+				myPlacemark = new ymaps.Placemark(
+					this.coord,
+					{
+						hintContent: this.title,
+					},
+					{
+						iconLayout: "default#imageWithContent",
+						iconImageHref: "",
+						iconImageSize: [53, 58],
+						iconImageOffset: [-27, -58],
+						iconContentLayout: MyIcon,
+					}
+				);
+			myMap.controls.add("zoomControl", {
+				// Кнопки зума на карту
+				size: "small",
+				position: {
+					left: "auto",
+					top: "auto",
+					bottom: 30,
+					right: 20,
+				},
+			});
+			myMap.behaviors.disable("scrollZoom");
+			myMap.geoObjects.add(myPlacemark);
+		});
+	}
 }
+
+for (const mapItem of document.querySelectorAll("[data-contact-map]")) new ContactMap(mapItem);

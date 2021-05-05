@@ -1,0 +1,100 @@
+@mixin udoli {
+	--color-main: #e94200;
+	--color-dop: #727272;
+	--color-main-back: #ffffff;
+	--color-dop-back: #f6f8fa;
+	--color-border: #e5e5e5;
+	--color-main-text: #000000;
+	--color-dop-text: #bebebe;
+	--color-cta: #80b918;
+	--color-error: #eb001b;
+	--color-alert: #ffdd2d;
+}
+
+@mixin center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+$content-max-weight: 1200px;
+$content-padding: 20px;
+
+.contact-map {
+	display: grid;
+	grid-gap: 24px;
+}
+
+.contact-map__item {
+	border: 1px solid var(--color-border);
+	overflow: hidden;
+	border-radius: 5px;
+	display: flex;
+	align-items: stretch;
+}
+
+.contact-map__body {
+	padding: 24px;
+	width: 50%;
+}
+
+.contact-map__h {
+	font-weight: normal;
+	font-size: 25px;
+	line-height: 30px;
+	margin: 0 0 10px;
+}
+
+.contact-map__metro {
+	display: flex;
+	align-items: center;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 19px;
+
+	> svg {
+		display: block;
+		background: var(--metro-color, #0645ad);
+		width: 20px;
+		height: 20px;
+		border-radius: 20px;
+		margin-right: 10px;
+	}
+}
+
+.contact-map__adress-wrap {
+	margin-top: 30px;
+	display: grid;
+	grid-template-columns: repeat(2, auto);
+	grid-gap: 30px;
+	justify-content: start;
+}
+
+.contact-map__adress {
+	&:first-child {
+		grid-column: span 2;
+	}
+}
+
+.contact-map__adress-name {
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 17px;
+	color: var(--color-dop);
+	margin-bottom: 5px;
+}
+
+.contact-map__adress-text {
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 19px;
+}
+.contact-map__map {
+	width: 50%;
+	height: 100%;
+
+	> ymaps > ymaps > ymaps canvas {
+		filter: grayscale(1) invert(0.8);
+	}
+}
