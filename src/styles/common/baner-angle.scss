@@ -21,6 +21,7 @@
 $content-max-weight: 1200px;
 $content-padding: 20px;
 
+// baner-angle
 .baner-angle {
 	border: 1px solid var(--color-border);
 	border-radius: 5px;
@@ -28,6 +29,11 @@ $content-padding: 20px;
 	align-items: stretch;
 	min-height: 150px;
 	overflow: hidden;
+	text-decoration: none;
+}
+
+.baner-angle_100 {
+	min-height: 100px;
 }
 
 .baner-angle__body {
@@ -37,6 +43,35 @@ $content-padding: 20px;
 	flex-direction: column;
 	justify-content: center;
 	position: relative;
+}
+
+.baner-angle__body_icon {
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	padding-left: 24px;
+}
+
+.baner-angle__icon {
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+	border: 2px solid var(--color-main);
+	position: relative;
+	margin-right: 20px;
+	flex-shrink: 0;
+
+	> svg {
+		display: block;
+		@include center();
+	}
+}
+
+.baner-angle__text-normal {
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 19px;
+	margin-bottom: 4px;
 }
 
 .baner-angle__h {
@@ -106,5 +141,57 @@ $content-padding: 20px;
 		width: 100%;
 		height: 120px;
 		order: 1;
+	}
+}
+
+// gray-baner
+.gray-baner {
+	border-radius: 5px;
+	background: var(--color-dop-back);
+	display: flex;
+	align-items: center;
+	padding: 30px;
+	text-decoration: none;
+}
+
+.gray-baner__text p {
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 19px;
+	margin: 16px 0;
+
+	&:first-child {
+		margin-top: 0;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.gray-baner__icon {
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+	border: 2px solid var(--color-main);
+	position: relative;
+	margin-left: 20px;
+	flex-shrink: 0;
+
+	> svg {
+		--icon-color: var(--color-main-text);
+		display: block;
+		@include center();
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.gray-baner {
+		padding: 14px;
+		flex-direction: column;
+	}
+
+	.gray-baner__icon {
+		margin-left: 0;
+		margin-top: 14px;
 	}
 }
