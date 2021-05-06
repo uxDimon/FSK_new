@@ -2771,3 +2771,11 @@ body.dark .not-found__wrap::after {
 .header__top {
   background-color: var(--color-dop-back);
   color: var(--color-main-text); }
+
+.section-margin {
+  margin-top: 0; }
+
+.filter {
+  padding-top: 0;
+  border: 1px solid var(--color-border);
+  border-radius: 5px; }
