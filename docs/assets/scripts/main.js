@@ -1,11 +1,6 @@
 const activeClass = "active";
 
 // Переключение табов
-// demo
-// button(data-tab-id="tabId1", data-tab-control="tab1") 1
-// button(data-tab-id="tabId1", data-tab-control="tab2") 2
-// .tab-block(data-tab-id="tabId1", data-tab-block="tab1") 1
-// .tab-block(data-tab-id="tabId1", data-tab-block="tab2") 2
 const tabIdList = document.querySelectorAll("[data-tab-id]");
 if (tabIdList) {
 	let tabGroupList = new Set();
@@ -36,27 +31,27 @@ if (tabIdList) {
 
 // Слайдер
 // https://swiperjs.com/swiper-api
-for (const slider of document.querySelectorAll(".main-slider")) {
+for (const slider of document.querySelectorAll(".main-slider-w")) {
 	var swiper = new Swiper(slider, {
 		loop: true,
 		slidesPerView: "auto",
 		centeredSlides: true,
 		speed: 800,
 		pagination: {
-			el: slider.querySelector(".main-slider__pagination"),
+			el: slider.querySelector(".main-slider-w__pagination"),
 			type: "fraction",
 		},
 		navigation: {
-			nextEl: slider.querySelector(".main-slider__button-next"),
-			prevEl: slider.querySelector(".main-slider__button-prev"),
+			nextEl: slider.querySelector(".main-slider-w__button-next"),
+			prevEl: slider.querySelector(".main-slider-w__button-prev"),
 		},
 		on: {
 			slideChangeTransitionStart: function () {
 				let textHeight = "";
 				if (document.documentElement.clientWidth <= 767) {
-					textHeight = this.slides[this.activeIndex].querySelector(".main-slider__content").scrollHeight + "px";
+					textHeight = this.slides[this.activeIndex].querySelector(".main-slider-w__content").scrollHeight + "px";
 				}
-				this.el.querySelector(".main-slider__button-wrap").style.bottom = textHeight;
+				this.el.querySelector(".main-slider-w__button-wrap").style.bottom = textHeight;
 			},
 		},
 	});
@@ -157,6 +152,103 @@ class Range {
 	}
 }
 
-for (const rangeWrap of document.querySelectorAll("[data-dual-range]")) {
-	new Range(rangeWrap);
+for (const rangeWrap of document.querySelectorAll("[data-dual-range]")) new Range(rangeWrap);
+
+// Контакты map
+class ContactMap {
+	constructor(item) {
+		this.coord = item.dataset.contactMap.split(", ");
+		this.map = item.querySelector(".contact-map__map");
+		this.title = item.querySelector(".contact-map__h").innerText;
+		this.created();
+	}
+	created() {
+		this.coord = this.coord.map((item) => Number(item));
+		ymaps.ready(() => {
+			let myMap = new ymaps.Map(this.map, {
+					center: this.coord,
+					zoom: 13,
+					controls: [],
+				}),
+				MyIcon = ymaps.templateLayoutFactory.createClass(
+					// Макет иконки
+					'<svg class="contact-map__icon-map" width="53" height="58" fill="none" viewBox="0 0 53 58"  xmlns="http://www.w3.org/2000/svg"><path d="M26.5 53C41.136 53 53 41.136 53 26.5S41.136 0 26.5 0 0 11.864 0 26.5 11.864 53 26.5 53z" fill="#FC4C02"/><path d="M33.88 50.44L26.44 43 19 50.44l7.44 7.44 7.44-7.44z" fill="#FC4C02"/><path d="M21.52 19.087h22.46a19.888 19.888 0 00-11.742-10.72L21.52 19.087z" fill="#fff"/><path d="M45.102 21.764H18.615c-.604 0-1.18-.385-1.412-.944a1.556 1.556 0 01.332-1.666l11.65-11.649A19.184 19.184 0 007.768 30.637h26.765c.604 0 1.18.385 1.41.944a1.558 1.558 0 01-.33 1.665l-12.197 12.2a19.2 19.2 0 0021.682-23.682h.004z" fill="#fff"/><path d="M31.637 33.29H8.757a19.893 19.893 0 0011.652 11.228L31.637 33.29z" fill="#fff"/></svg>'
+				),
+				myPlacemark = new ymaps.Placemark(
+					this.coord,
+					{
+						hintContent: this.title,
+					},
+					{
+						iconLayout: "default#imageWithContent",
+						iconImageHref: "",
+						iconImageSize: [53, 58],
+						iconImageOffset: [-27, -58],
+						iconContentLayout: MyIcon,
+					}
+				);
+			myMap.controls.add("zoomControl", {
+				// Кнопки зума на карту
+				size: "small",
+				position: {
+					left: "auto",
+					top: "auto",
+					bottom: 30,
+					right: 20,
+				},
+			});
+			myMap.behaviors.disable("scrollZoom");
+			myMap.geoObjects.add(myPlacemark);
+		});
+	}
+}
+
+for (const mapItem of document.querySelectorAll("[data-contact-map]")) new ContactMap(mapItem);
+
+// Галерея слайдер на всю ширену
+class GallerySlider {
+	constructor(item) {
+		this.body = item.querySelector(".gallery-slider__body");
+		this.nav = item.querySelector(".gallery-slider__nav");
+		this.buttonNext = item.querySelector(".gallery-slider__button-next");
+		this.buttonPrev = item.querySelector(".gallery-slider__button-prev");
+		this.created();
+	}
+	created() {
+		let galleryNav = new Swiper(this.nav, {
+			spaceBetween: 14,
+			slidesPerView: 4,
+			slidesPerColumn: 1,
+			watchSlidesVisibility: true,
+			watchSlidesProgress: true,
+			breakpoints: {
+				// when window width is >= 960px
+				960: {
+					spaceBetween: 24,
+					slidesPerView: 2,
+					slidesPerColumn: 2,
+				},
+			},
+		});
+		let galleryBody = new Swiper(this.body, {
+			spaceBetween: 10,
+			navigation: {
+				nextEl: this.buttonPrev,
+				prevEl: this.buttonNext,
+			},
+			thumbs: {
+				swiper: galleryNav,
+			},
+		});
+	}
+}
+
+for (const gallerySlider of document.querySelectorAll(".gallery-slider")) new GallerySlider(gallerySlider);
+
+// Cлайдер advant-slider
+for (const slider of document.querySelectorAll(".advant-slider")) {
+	let advantSlider = new Swiper(slider, {
+		spaceBetween: 24,
+		slidesPerView: "auto",
+	});
 }
