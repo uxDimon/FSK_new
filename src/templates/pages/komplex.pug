@@ -6,9 +6,9 @@ block variables
 
 block content
     main
-        .cont-block__wrap 
-            .cont-block.cont-block_m30
-                h1.cont-block__h1 Best Western Space Hotel 
+        // Шапка
+        .cont-block__wrap.komplex-head__wrap
+            .cont-block.bread-cru__wrap
                 ul.bread-cru 
                     li.bread-cru__item 
                         a(href="#").bread-cru__link Главная
@@ -17,5 +17,78 @@ block content
                     li.bread-cru__item 
                         .bread-cru__link Best Western Space Hotel 
 
+            .cont-block.komplex-head
+                h1.komplex-head__h1 Best Western Space Hotel 
+                .komplex-head__adres 
+                    svg(width="20" height="20")
+                        use(xlink:href="./assets/images/sprite.svg#geo-point")
+                    | г. Пушкин, ул. Камероновская
+                .komplex-head__button-wrap
+                    a(href="#" title="title").button 
+                        svg(width="18" height="18")
+                            use(xlink:href="./assets/images/sprite.svg#setting")
+                        | Выбрать квартиру
+                    .komplex-head__timer(data-timer-end-date='25.05.2021')
+                        svg(width="18" height="18")
+                            use(xlink:href="./assets/images/sprite.svg#сlock")
+                        span До повышения цен: 
+                            strong.color-main(data-timer-days) 12 
+                            | дней и 
+                            strong.color-main(data-timer-hours) 23 
+                            | часа
+
+        .cont-block__wrap.komplex-nav__wrap.cont-block_mb30
+            nav.cont-block
+                ul.komplex-nav
+                    li.komplex-nav__item 
+                        a(href="#" title="О проекте").komplex-nav__linc.active О проекте
+                    li.komplex-nav__item 
+                        a(href="#" title="Галерея").komplex-nav__linc Галерея
+                    li.komplex-nav__item 
+                        a(href="#" title="Расположение").komplex-nav__linc Расположение
+                    li.komplex-nav__item 
+                        a(href="#" title="Преимущества").komplex-nav__linc Преимущества
+                    li.komplex-nav__item 
+                        a(href="#" title="Акции").komplex-nav__linc Акции
+                    li.komplex-nav__item 
+                        a(href="#" title="Квартиры и цены").komplex-nav__linc Квартиры и цены
+                    li.komplex-nav__item 
+                        a(href="#" title="Ипотека").komplex-nav__linc Ипотека
+                    li.komplex-nav__item 
+                        a(href="#" title="Ход строительства").komplex-nav__linc Ход строительства
+                    li.komplex-nav__item 
+                        a(href="#" title="Документация").komplex-nav__linc Документация
+
+        // О проекте
+        .cont-block__wrap
+            .cont-block.cont-block_mb50
+                h2.cont-block__h О проекте
+                .komplex-info 
+                    .komplex-info__text 
+                        p Жилой комплекс бизнес-класса в престижном Хорошёвском районе в окружении исторической сталинской застройки и статусных жилых комплексов. Это идеальное сочетание престижа района, авторской архитектуры, индивидуального подхода к планировкам и дизайну интерьеров комплекса.
+                        p Жилой комплекс бизнес-класса в престижном Хорошёвском районе в окружении исторической сталинской застройки и статусных жилых комплексов. Это идеальное сочетание престижа района, авторской архитектуры, индивидуального подхода к планировкам и дизайну интерьеров комплекса.
+                    ul.komplex-info__utp
+                        li.komplex-info__utp-item 
+                            .komplex-info__utp-icon
+                                svg(width="21" height="20")
+                                    use(xlink:href="./assets/images/sprite.svg#ok")                                
+                            .komplex-info__utp-text Более 50 видов планировок и ещё уточнение 
+                        li.komplex-info__utp-item 
+                            .komplex-info__utp-icon
+                                svg(width="21" height="20")
+                                    use(xlink:href="./assets/images/sprite.svg#ok")                                
+                            .komplex-info__utp-text Закрытый  внутренний двор
+                        li.komplex-info__utp-item 
+                            .komplex-info__utp-icon
+                                svg(width="21" height="20")
+                                    use(xlink:href="./assets/images/sprite.svg#ok")                                
+                            .komplex-info__utp-text Закрытый  внутренний двор и ещё уточнение 
+                        li.komplex-info__utp-item 
+                            .komplex-info__utp-icon
+                                svg(width="21" height="20")
+                                    use(xlink:href="./assets/images/sprite.svg#ok")                                
+                            .komplex-info__utp-text Закрытый  внутренний двор и ещё уточнение 
+
         //- .cont-block__wrap
             .cont-block.cont-block_mb70
+                h2.cont-block__h 

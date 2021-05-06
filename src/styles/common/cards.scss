@@ -104,6 +104,11 @@ $content-padding: 20px;
 	grid-template-columns: repeat(4, 1fr);
 	grid-gap: 24px;
 	margin-bottom: 30px;
+
+	> .cont-block__button-wrap {
+		grid-column: 1/-1;
+		margin-top: 6px;
+	}
 }
 
 .card-log__item {

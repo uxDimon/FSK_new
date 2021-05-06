@@ -479,6 +479,12 @@ body.dark {
 		animation: button-active 600ms ease-in-out forwards;
 		z-index: 1;
 	}
+
+	> svg {
+		&:first-child {
+			margin-right: 10px;
+		}
+	}
 }
 
 @keyframes button-active {
@@ -621,7 +627,18 @@ body.dark {
 @import "./pages/okomp.scss";
 @import "./pages/klient.scss";
 @import "./pages/404.scss";
+@import "./pages/komplex.scss";
 @import "./common/footer.scss";
+
+/* Костыль ~(>_<。)＼ */
+.header_mimic {
+	height: 80px;
+}
+.footer,
+.header__top {
+	background-color: var(--color-dop-back);
+	color: var(--color-main-text);
+}
 
 // @media screen and (max-width: 1274px) {
 

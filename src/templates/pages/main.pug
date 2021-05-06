@@ -1,345 +1,345 @@
 extends ../template
 
 block variables
-    - var title = 'Главная'
-    - var contactForm = true
+	- var title = 'Главная'
+	- var contactForm = true
 
 block content
-    main
-        // Слайдер на главной
-        .cont-block__wrap.cont-block__wrap_swiper
-            .main-slider.swiper-container
-                .swiper-wrapper
-                    .swiper-slide
-                        .main-slider__slide
-                            .main-slider__content
-                                .main-slider__logo
-                                    img(src="./assets/images/kv-logo.svg" alt="Best Western Space Hotel")
-                                a(href="#").main-slider__text 
-                                    p Cвоя квартира в сданном доме (первом корпусе) за 20%!
-                                a(href="#").link-icon.main-slider__button
-                                    | Узнать больше
-                                    .link-icon__icon
-                                        svg(width="20" height="20")
-                                            use(xlink:href="./assets/images/sprite.svg#arrow")
-                                svg(width="84" height="450").main-slider__content-right
-                                    use(xlink:href="./assets/images/sprite.svg#slider-arrow")
-                            .main-slider__img
-                                img(src="./assets/images/img-02.jpg" alt="Cвоя квартира в сданном доме (первом корпусе) за 20%!")
+	main
+		// Слайдер на главной
+		.cont-block__wrap.cont-block__wrap_swiper
+			.main-slider-w.swiper-container
+				.swiper-wrapper
+					.swiper-slide
+						.main-slider-w__slide
+							.main-slider-w__content
+								.main-slider-w__logo
+									img(src="./assets/images/kv-logo.svg" alt="Best Western Space Hotel")
+								a(href="#").main-slider-w__text 
+									p Cвоя квартира в сданном доме (первом корпусе) за 20%!
+								a(href="#").link-icon.main-slider-w__button
+									| Узнать больше
+									.link-icon__icon
+										svg(width="20" height="20")
+											use(xlink:href="./assets/images/sprite.svg#arrow")
+								svg(width="84" height="450").main-slider-w__content-right
+									use(xlink:href="./assets/images/sprite.svg#slider-arrow")
+							.main-slider-w__img
+								img(src="./assets/images/img-02.jpg" alt="Cвоя квартира в сданном доме (первом корпусе) за 20%!")
 
-                    .swiper-slide
-                        .main-slider__slide
-                            .main-slider__content
-                                .main-slider__logo
-                                    img(src="./assets/images/kv-logo.svg" alt="Best Western Space Hotel")
-                                .main-slider__text 
-                                    p Cвоя квартира в сданном доме (первом корпусе) за 20%! Cвоя квартира в сданном доме.
-                                a(href="#").link-icon.main-slider__button
-                                    | Узнать больше
-                                    .link-icon__icon
-                                        svg(width="20" height="20")
-                                            use(xlink:href="./assets/images/sprite.svg#arrow")
-                                svg(width="84" height="450").main-slider__content-right
-                                    use(xlink:href="./assets/images/sprite.svg#slider-arrow")
-                            .main-slider__img
-                                img(src="./assets/images/img-01.jpg" alt="Cвоя квартира в сданном доме (первом корпусе) за 20%!")
+					.swiper-slide
+						.main-slider-w__slide
+							.main-slider-w__content
+								.main-slider-w__logo
+									img(src="./assets/images/kv-logo.svg" alt="Best Western Space Hotel")
+								.main-slider-w__text 
+									p Cвоя квартира в сданном доме (первом корпусе) за 20%! Cвоя квартира в сданном доме.
+								a(href="#").link-icon.main-slider-w__button
+									| Узнать больше
+									.link-icon__icon
+										svg(width="20" height="20")
+											use(xlink:href="./assets/images/sprite.svg#arrow")
+								svg(width="84" height="450").main-slider-w__content-right
+									use(xlink:href="./assets/images/sprite.svg#slider-arrow")
+							.main-slider-w__img
+								img(src="./assets/images/img-01.jpg" alt="Cвоя квартира в сданном доме (первом корпусе) за 20%!")
 
-                .main-slider__controls
-                    .main-slider__button-wrap
-                        .main-slider__pagination
-                        button.main-slider__button-next
-                            svg(width="18" height="14")
-                                use(xlink:href="./assets/images/sprite.svg#arrow-full")
-                        button.main-slider__button-prev
-                            svg(width="18" height="14")
-                                use(xlink:href="./assets/images/sprite.svg#arrow-full")
+				.main-slider-w__controls
+					.main-slider-w__button-wrap
+						.main-slider-w__pagination
+						button.main-slider-w__button-next
+							svg(width="18" height="14")
+								use(xlink:href="./assets/images/sprite.svg#arrow-full")
+						button.main-slider-w__button-prev
+							svg(width="18" height="14")
+								use(xlink:href="./assets/images/sprite.svg#arrow-full")
 
-        // ГК ФСК
-        .cont-block__wrap.cont-block_m70
-            .cont-block
-                h2.cont-block__h ГК ФСК
+		// ГК ФСК
+		.cont-block__wrap.cont-block_m70
+			.cont-block
+				h2.cont-block__h ГК ФСК
 
-                .main-utp
-                    ul.main-utp__list 
-                        li.main-utp__item
-                            .main-utp__h Toп-10 
-                                span.color-main-text Forbes
-                            .main-utp__text в рейтинге самых надежных <br>застройщиков страны
-                        li.main-utp__item
-                            .main-utp__h 15
-                            .main-utp__text лет работы на рынке <br>недвижимости
-                        li.main-utp__item
-                            .main-utp__h >10
-                            .main-utp__text млн м² совокупный <br>объем проектов за 15 лет
-                        li.main-utp__item
-                            .main-utp__h 22
-                            .main-utp__text проекта в стадии <br>реализации
-                        li.main-utp__item
-                            .main-utp__h 775
-                            .main-utp__text тыс. м² введено <br>в эксплуатацию в 2020 году
+				.main-utp
+					ul.main-utp__list 
+						li.main-utp__item
+							.main-utp__h Toп-10 
+								span.color-main-text Forbes
+							.main-utp__text в рейтинге самых надежных <br>застройщиков страны
+						li.main-utp__item
+							.main-utp__h 15
+							.main-utp__text лет работы на рынке <br>недвижимости
+						li.main-utp__item
+							.main-utp__h >10
+							.main-utp__text млн м² совокупный <br>объем проектов за 15 лет
+						li.main-utp__item
+							.main-utp__h 22
+							.main-utp__text проекта в стадии <br>реализации
+						li.main-utp__item
+							.main-utp__h 775
+							.main-utp__text тыс. м² введено <br>в эксплуатацию в 2020 году
 
-        // Подобрать объект
-        //- .cont-block__wrap.cont-block_m70
-            .cont-block
-                h2.cont-block__h Подобрать объект
+		// Подобрать объект
+		//- .cont-block__wrap.cont-block_m70
+			.cont-block
+				h2.cont-block__h Подобрать объект
 
-                .filter-m 
-                    ul.filter-m__head 
-                        li.filter-m__head-button-wrap
-                            label.filter-m__head-button
-                                input(type="radio" name="filter-head-button" checked).filter-m__head-button-input
-                                .filter-m__head-button-text Квартиры и апартаменты
-                        li.filter-m__head-button-wrap
-                            label.filter-m__head-button
-                                input(type="radio" name="filter-head-button").filter-m__head-button-input
-                                .filter-m__head-button-text Коммерческие помещения
-                        li.filter-m__head-button-wrap
-                            label.filter-m__head-button
-                                input(type="radio" name="filter-head-button").filter-m__head-button-input
-                                .filter-m__head-button-text Паркинги
-                        li.filter-m__head-button-wrap
-                            label.filter-m__head-button
-                                input(type="radio" name="filter-head-button").filter-m__head-button-input
-                                .filter-m__head-button-text Кладовые
+				.filter-m 
+					ul.filter-m__head 
+						li.filter-m__head-button-wrap
+							label.filter-m__head-button
+								input(type="radio" name="filter-head-button" checked).filter-m__head-button-input
+								.filter-m__head-button-text Квартиры и апартаменты
+						li.filter-m__head-button-wrap
+							label.filter-m__head-button
+								input(type="radio" name="filter-head-button").filter-m__head-button-input
+								.filter-m__head-button-text Коммерческие помещения
+						li.filter-m__head-button-wrap
+							label.filter-m__head-button
+								input(type="radio" name="filter-head-button").filter-m__head-button-input
+								.filter-m__head-button-text Паркинги
+						li.filter-m__head-button-wrap
+							label.filter-m__head-button
+								input(type="radio" name="filter-head-button").filter-m__head-button-input
+								.filter-m__head-button-text Кладовые
 
-                    .filter-m__body 
-                        .filter-m__body-line 
-                            .multi-select
-                                .multi-select__name Количество комнат
-                                ul.multi-select__body 
-                                    li.multi-select__item 
-                                        label.multi-select__buttn
-                                            input(type="checkbox" name="rooms").multi-select__input
-                                            .multi-select__text С
-                                    li.multi-select__item 
-                                        label.multi-select__buttn
-                                            input(type="checkbox" name="rooms").multi-select__input
-                                            .multi-select__text 1
-                                    li.multi-select__item 
-                                        label.multi-select__buttn
-                                            input(type="checkbox" name="rooms").multi-select__input
-                                            .multi-select__text 2
-                                    li.multi-select__item 
-                                        label.multi-select__buttn
-                                            input(type="checkbox" name="rooms").multi-select__input
-                                            .multi-select__text 3
-                            .multi-select
-                                .multi-select__name
-                                ul.multi-select__body 
-                                    li.multi-select__item 
-                                        label.multi-select__buttn
-                                            input(type="checkbox" name="rooms").multi-select__input
-                                            .multi-select__text Евро
+					.filter-m__body 
+						.filter-m__body-line 
+							.multi-select
+								.multi-select__name Количество комнат
+								ul.multi-select__body 
+									li.multi-select__item 
+										label.multi-select__buttn
+											input(type="checkbox" name="rooms").multi-select__input
+											.multi-select__text С
+									li.multi-select__item 
+										label.multi-select__buttn
+											input(type="checkbox" name="rooms").multi-select__input
+											.multi-select__text 1
+									li.multi-select__item 
+										label.multi-select__buttn
+											input(type="checkbox" name="rooms").multi-select__input
+											.multi-select__text 2
+									li.multi-select__item 
+										label.multi-select__buttn
+											input(type="checkbox" name="rooms").multi-select__input
+											.multi-select__text 3
+							.multi-select
+								.multi-select__name
+								ul.multi-select__body 
+									li.multi-select__item 
+										label.multi-select__buttn
+											input(type="checkbox" name="rooms").multi-select__input
+											.multi-select__text Евро
 
-                            .dual-range(data-dual-range='{"min":"3.1","max":"16.7","step":"0.1"}').filter-m__body_dual-range
-                                .dual-range__name Стоимость, млн ₽
-                                .dual-range__body 
-                                    label.dual-range__input 
-                                        input(type="number" name="" data-course='from' data-type='number').dual-range__input-input
-                                        .dual-range__input-text от
-                                        svg(width="12" height="52").dual-range__input-icon
-                                            use(xlink:href="./assets/images/sprite.svg#dual-range")                                        
-                                    label.dual-range__input 
-                                        input(type="number" name="" data-course='to' data-type='number').dual-range__input-input
-                                        .dual-range__input-text до
-                                    .dual-range__body-progres
-                                    input(type="range" name="" data-course='from' data-type='range').dual-range__range
-                                    input(type="range" name="" data-course='to' data-type='range').dual-range__range
+							.dual-range(data-dual-range='{"min":"3.1","max":"16.7","step":"0.1"}').filter-m__body_dual-range
+								.dual-range__name Стоимость, млн ₽
+								.dual-range__body 
+									label.dual-range__input 
+										input(type="number" name="" data-course='from' data-type='number').dual-range__input-input
+										.dual-range__input-text от
+										svg(width="12" height="52").dual-range__input-icon
+											use(xlink:href="./assets/images/sprite.svg#dual-range")                                        
+									label.dual-range__input 
+										input(type="number" name="" data-course='to' data-type='number').dual-range__input-input
+										.dual-range__input-text до
+									.dual-range__body-progres
+									input(type="range" name="" data-course='from' data-type='range').dual-range__range
+									input(type="range" name="" data-course='to' data-type='range').dual-range__range
 
-                            .dual-range(data-dual-range='{"min":"21","max":"145.5","step":"0.5"}').filter-m__body_dual-range
-                                .dual-range__name Площадь, м²
-                                .dual-range__body 
-                                    label.dual-range__input 
-                                        input(type="number" name="" data-course='from' data-type='number').dual-range__input-input
-                                        .dual-range__input-text от
-                                        svg(width="12" height="52").dual-range__input-icon
-                                            use(xlink:href="./assets/images/sprite.svg#dual-range")                                        
-                                    label.dual-range__input 
-                                        input(type="number" name="" data-course='to' data-type='number').dual-range__input-input
-                                        .dual-range__input-text до
-                                    .dual-range__body-progres
-                                    input(type="range" name="" data-course='from' data-type='range').dual-range__range
-                                    input(type="range" name="" data-course='to' data-type='range').dual-range__range
+							.dual-range(data-dual-range='{"min":"21","max":"145.5","step":"0.5"}').filter-m__body_dual-range
+								.dual-range__name Площадь, м²
+								.dual-range__body 
+									label.dual-range__input 
+										input(type="number" name="" data-course='from' data-type='number').dual-range__input-input
+										.dual-range__input-text от
+										svg(width="12" height="52").dual-range__input-icon
+											use(xlink:href="./assets/images/sprite.svg#dual-range")                                        
+									label.dual-range__input 
+										input(type="number" name="" data-course='to' data-type='number').dual-range__input-input
+										.dual-range__input-text до
+									.dual-range__body-progres
+									input(type="range" name="" data-course='from' data-type='range').dual-range__range
+									input(type="range" name="" data-course='to' data-type='range').dual-range__range
 
-                            lable.input.filter-m__body_input
-                                .input__name Готовность до
-                                select(name="").input__input
-                                    option(value="1") Любой
-                                    option(value="2") Любой3
-                                    option(value="3") Любой2
+							lable.input.filter-m__body_input
+								.input__name Готовность до
+								select(name="").input__input
+									option(value="1") Любой
+									option(value="2") Любой3
+									option(value="3") Любой2
 
-                        .filter-m__body-line.filter-m__body-line_extra
-                            .dual-range(data-dual-range='{"min":"5","max":"50","step":"1"}').filter-m__body_dual-range
-                                .dual-range__name Кухня, м2
-                                .dual-range__body 
-                                    label.dual-range__input 
-                                        input(type="number" name="" data-course='from' data-type='number').dual-range__input-input
-                                        .dual-range__input-text от
-                                        svg(width="12" height="52").dual-range__input-icon
-                                            use(xlink:href="./assets/images/sprite.svg#dual-range")                                        
-                                    label.dual-range__input 
-                                        input(type="number" name="" data-course='to' data-type='number').dual-range__input-input
-                                        .dual-range__input-text до
-                                    .dual-range__body-progres
-                                    input(type="range" name="" data-course='from' data-type='range').dual-range__range
-                                    input(type="range" name="" data-course='to' data-type='range').dual-range__range
+						.filter-m__body-line.filter-m__body-line_extra
+							.dual-range(data-dual-range='{"min":"5","max":"50","step":"1"}').filter-m__body_dual-range
+								.dual-range__name Кухня, м2
+								.dual-range__body 
+									label.dual-range__input 
+										input(type="number" name="" data-course='from' data-type='number').dual-range__input-input
+										.dual-range__input-text от
+										svg(width="12" height="52").dual-range__input-icon
+											use(xlink:href="./assets/images/sprite.svg#dual-range")                                        
+									label.dual-range__input 
+										input(type="number" name="" data-course='to' data-type='number').dual-range__input-input
+										.dual-range__input-text до
+									.dual-range__body-progres
+									input(type="range" name="" data-course='from' data-type='range').dual-range__range
+									input(type="range" name="" data-course='to' data-type='range').dual-range__range
 
-                            .dual-range(data-dual-range='{"min":"5","max":"50","step":"1"}').filter-m__body_dual-range
-                                .dual-range__name Этаж
-                                .dual-range__body 
-                                    label.dual-range__input 
-                                        input(type="number" name="" data-course='from' data-type='number').dual-range__input-input
-                                        .dual-range__input-text от
-                                        svg(width="12" height="52").dual-range__input-icon
-                                            use(xlink:href="./assets/images/sprite.svg#dual-range")                                        
-                                    label.dual-range__input 
-                                        input(type="number" name="" data-course='to' data-type='number').dual-range__input-input
-                                        .dual-range__input-text до
-                                    .dual-range__body-progres
-                                    input(type="range" name="" data-course='from' data-type='range').dual-range__range
-                                    input(type="range" name="" data-course='to' data-type='range').dual-range__range
+							.dual-range(data-dual-range='{"min":"5","max":"50","step":"1"}').filter-m__body_dual-range
+								.dual-range__name Этаж
+								.dual-range__body 
+									label.dual-range__input 
+										input(type="number" name="" data-course='from' data-type='number').dual-range__input-input
+										.dual-range__input-text от
+										svg(width="12" height="52").dual-range__input-icon
+											use(xlink:href="./assets/images/sprite.svg#dual-range")                                        
+									label.dual-range__input 
+										input(type="number" name="" data-course='to' data-type='number').dual-range__input-input
+										.dual-range__input-text до
+									.dual-range__body-progres
+									input(type="range" name="" data-course='from' data-type='range').dual-range__range
+									input(type="range" name="" data-course='to' data-type='range').dual-range__range
 
-                            lable.input.filter-m__body_input
-                                .input__name Корпус (если есть)
-                                select(name="").input__input
-                                    option(value="1") Любой
-                                    option(value="2") Любой3
-                                    option(value="3") Любой2
+							lable.input.filter-m__body_input
+								.input__name Корпус (если есть)
+								select(name="").input__input
+									option(value="1") Любой
+									option(value="2") Любой3
+									option(value="3") Любой2
 
-                            lable.input.filter-m__body_input
-                                .input__name Номер квартиры
-                                input(type="text" name="" placeholder="Номер квартиры").input__input
-                                .input__error Поле указано не верно  
+							lable.input.filter-m__body_input
+								.input__name Номер квартиры
+								input(type="text" name="" placeholder="Номер квартиры").input__input
+								.input__error Поле указано не верно  
 
-        // Проекты в продаже
-        .cont-block__wrap.cont-block_m70
-            .cont-block
-                h2.cont-block__h Проекты в продаже
+		// Проекты в продаже
+		.cont-block__wrap.cont-block_m70
+			.cont-block
+				h2.cont-block__h Проекты в продаже
 
-                ul.card-main 
-                    li.card-main__item
-                        a(href="#").card-main__link
-                            .card-main__img-wrap
-                                img(src="./assets/images/img-01.jpg" alt="Best Western Space Hotel").card-main__img
-                                .card-main__income Доход до 75 000 ₽./мес
-                                img(src="./assets/images/kv-logo.svg" alt="Best Western Space Hotel").card-main__logo
+				ul.card-main 
+					li.card-main__item
+						a(href="#").card-main__link
+							.card-main__img-wrap
+								img(src="./assets/images/img-01.jpg" alt="Best Western Space Hotel").card-main__img
+								.card-main__income Доход до 75 000 ₽./мес
+								img(src="./assets/images/kv-logo.svg" alt="Best Western Space Hotel").card-main__logo
 
-                            .card-main__body
-                                h4.card-main__h Best Western Zoom Hotel
-                                .card-main__info 
-                                    .card-main__metro 
-                                        svg(width="20" height="20").metro-color_2
-                                            use(xlink:href="./assets/images/sprite.svg#metro")
-                                        | Черная речка
+							.card-main__body
+								h4.card-main__h Best Western Zoom Hotel
+								.card-main__info 
+									.card-main__metro 
+										svg(width="20" height="20").metro-color_2
+											use(xlink:href="./assets/images/sprite.svg#metro")
+										| Черная речка
 
-                                    .card-main__time
-                                        svg(width="15" height="15")
-                                            use(xlink:href="./assets/images/sprite.svg#little-man")
-                                        | 15 минут
+									.card-main__time
+										svg(width="15" height="15")
+											use(xlink:href="./assets/images/sprite.svg#little-man")
+										| 15 минут
 
-                                    .card-main__prise от 6.9 млн ₽
+									.card-main__prise от 6.9 млн ₽
 
-                    li.card-main__item
-                        a(href="#").card-main__link
-                            .card-main__img-wrap
-                                img(src="./assets/images/img-02.jpg" alt="Best Western Space Hotel").card-main__img
-                                .card-main__income Доход до 75 000 ₽./мес
-                                img(src="./assets/images/kv-logo.svg" alt="Best Western Space Hotel").card-main__logo
+					li.card-main__item
+						a(href="#").card-main__link
+							.card-main__img-wrap
+								img(src="./assets/images/img-02.jpg" alt="Best Western Space Hotel").card-main__img
+								.card-main__income Доход до 75 000 ₽./мес
+								img(src="./assets/images/kv-logo.svg" alt="Best Western Space Hotel").card-main__logo
 
-                            .card-main__body
-                                h4.card-main__h Best Western Space Hotel
-                                .card-main__info 
-                                    .card-main__metro 
-                                        svg(width="20" height="20").metro-color_1
-                                            use(xlink:href="./assets/images/sprite.svg#metro")
-                                        | Черная речка
+							.card-main__body
+								h4.card-main__h Best Western Space Hotel
+								.card-main__info 
+									.card-main__metro 
+										svg(width="20" height="20").metro-color_1
+											use(xlink:href="./assets/images/sprite.svg#metro")
+										| Черная речка
 
-                                    .card-main__time
-                                        svg(width="15" height="15")
-                                            use(xlink:href="./assets/images/sprite.svg#little-man")
-                                        | 15 минут
+									.card-main__time
+										svg(width="15" height="15")
+											use(xlink:href="./assets/images/sprite.svg#little-man")
+										| 15 минут
 
-                                    .card-main__prise от 6.9 млн ₽
+									.card-main__prise от 6.9 млн ₽
 
-                    li.card-main__item
-                        a(href="#").card-main__link
-                            .card-main__img-wrap
-                                img(src="./assets/images/img-01.jpg" alt="Best Western Space Hotel").card-main__img
-                                .card-main__income Доход до 75 000 ₽./мес
-                                img(src="./assets/images/kv-logo.svg" alt="Best Western Space Hotel").card-main__logo
+					li.card-main__item
+						a(href="#").card-main__link
+							.card-main__img-wrap
+								img(src="./assets/images/img-01.jpg" alt="Best Western Space Hotel").card-main__img
+								.card-main__income Доход до 75 000 ₽./мес
+								img(src="./assets/images/kv-logo.svg" alt="Best Western Space Hotel").card-main__logo
 
-                            .card-main__body
-                                h4.card-main__h Best Western Space Hotel
-                                .card-main__info 
-                                    .card-main__metro 
-                                        svg(width="20" height="20").metro-color_5
-                                            use(xlink:href="./assets/images/sprite.svg#metro")
-                                        | Черная речка
+							.card-main__body
+								h4.card-main__h Best Western Space Hotel
+								.card-main__info 
+									.card-main__metro 
+										svg(width="20" height="20").metro-color_5
+											use(xlink:href="./assets/images/sprite.svg#metro")
+										| Черная речка
 
-                                    .card-main__time
-                                        svg(width="15" height="15")
-                                            use(xlink:href="./assets/images/sprite.svg#little-man")
-                                        | 15 минут
+									.card-main__time
+										svg(width="15" height="15")
+											use(xlink:href="./assets/images/sprite.svg#little-man")
+										| 15 минут
 
-                                    .card-main__prise от 6.9 млн ₽
+									.card-main__prise от 6.9 млн ₽
 
-                    li.card-main__item
-                        a(href="#").card-main__link
-                            .card-main__img-wrap
-                                img(src="./assets/images/img-02.jpg" alt="Best Western Space Hotel").card-main__img
-                                .card-main__income Доход до 75 000 ₽./мес
-                                img(src="./assets/images/kv-logo.svg" alt="Best Western Space Hotel").card-main__logo
+					li.card-main__item
+						a(href="#").card-main__link
+							.card-main__img-wrap
+								img(src="./assets/images/img-02.jpg" alt="Best Western Space Hotel").card-main__img
+								.card-main__income Доход до 75 000 ₽./мес
+								img(src="./assets/images/kv-logo.svg" alt="Best Western Space Hotel").card-main__logo
 
-                            .card-main__body
-                                h4.card-main__h Best Western Space Hotel
-                                .card-main__info 
-                                    .card-main__metro 
-                                        svg(width="20" height="20").metro-color_3
-                                            use(xlink:href="./assets/images/sprite.svg#metro")
-                                        | Черная речка
+							.card-main__body
+								h4.card-main__h Best Western Space Hotel
+								.card-main__info 
+									.card-main__metro 
+										svg(width="20" height="20").metro-color_3
+											use(xlink:href="./assets/images/sprite.svg#metro")
+										| Черная речка
 
-                                    .card-main__time
-                                        svg(width="15" height="15")
-                                            use(xlink:href="./assets/images/sprite.svg#little-man")
-                                        | 15 минут
+									.card-main__time
+										svg(width="15" height="15")
+											use(xlink:href="./assets/images/sprite.svg#little-man")
+										| 15 минут
 
-                                    .card-main__prise от 6.9 млн ₽
+									.card-main__prise от 6.9 млн ₽
 
-        // Бронируйте и покупайте онлайн
-        .cont-block__wrap.narrow-banner__wrap.cont-block_mb70
-            .cont-block.narrow-banner
-                .narrow-banner__body
-                    h2.narrow-banner__h Бронируйте и покупайте 
-                        span.color-main онлайн
-                    .narrow-banner__text 
-                        p ГК ФСК в Петербурге и УК СП-Сервис стали партнерами и какой-то текст
-                    .narrow-banner__angle
-                        svg(width="84" height="450")
-                            use(xlink:href="./assets/images/sprite.svg#slider-arrow")
-                .narrow-banner__img
+		// Бронируйте и покупайте онлайн
+		.cont-block__wrap.narrow-banner__wrap.cont-block_mb70
+			.cont-block.narrow-banner
+				.narrow-banner__body
+					h2.narrow-banner__h Бронируйте и покупайте 
+						span.color-main онлайн
+					.narrow-banner__text 
+						p ГК ФСК в Петербурге и УК СП-Сервис стали партнерами и какой-то текст
+					.narrow-banner__angle
+						svg(width="84" height="450")
+							use(xlink:href="./assets/images/sprite.svg#slider-arrow")
+				.narrow-banner__img
 
-        // Ипотека
-        .cont-block__wrap.cont-block_m70
-            .cont-block
-                h2.cont-block__h Ипотека
+		// Ипотека
+		.cont-block__wrap.cont-block_m70
+			.cont-block
+				h2.cont-block__h Ипотека
 
-                ul.main-icon-list
-                    li.main-icon-list__item
-                        svg(width="50" height="50").main-icon-list__icon
-                            use(xlink:href="./assets/images/sprite.svg#lice")
-                        .main-icon-list__text Снижение первоначального взноса по льготной ипотеке
+				ul.main-icon-list
+					li.main-icon-list__item
+						svg(width="50" height="50").main-icon-list__icon
+							use(xlink:href="./assets/images/sprite.svg#lice")
+						.main-icon-list__text Снижение первоначального взноса по льготной ипотеке
 
-                    li.main-icon-list__item
-                        svg(width="50" height="50").main-icon-list__icon
-                            use(xlink:href="./assets/images/sprite.svg#percent")
-                        .main-icon-list__text Выручка ГК ФСК в 2020 году составила 130,067 млрд рублей
+					li.main-icon-list__item
+						svg(width="50" height="50").main-icon-list__icon
+							use(xlink:href="./assets/images/sprite.svg#percent")
+						.main-icon-list__text Выручка ГК ФСК в 2020 году составила 130,067 млрд рублей
 
-                    li.main-icon-list__item
-                        svg(width="50" height="50").main-icon-list__icon
-                            use(xlink:href="./assets/images/sprite.svg#mail")
-                        .main-icon-list__text Снижение первоначального взноса по льготной ипотеке
+					li.main-icon-list__item
+						svg(width="50" height="50").main-icon-list__icon
+							use(xlink:href="./assets/images/sprite.svg#mail")
+						.main-icon-list__text Снижение первоначального взноса по льготной ипотеке
 
-                    li.main-icon-list__item
-                        svg(width="50" height="50").main-icon-list__icon
-                            use(xlink:href="./assets/images/sprite.svg#mail")
-                        .main-icon-list__text Выручка ГК ФСК в 2020 году составила 130,067 млрд рублей
+					li.main-icon-list__item
+						svg(width="50" height="50").main-icon-list__icon
+							use(xlink:href="./assets/images/sprite.svg#mail")
+						.main-icon-list__text Выручка ГК ФСК в 2020 году составила 130,067 млрд рублей

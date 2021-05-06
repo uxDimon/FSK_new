@@ -1,11 +1,6 @@
 const activeClass = "active";
 
 // Переключение табов
-// demo
-// button(data-tab-id="tabId1", data-tab-control="tab1") 1
-// button(data-tab-id="tabId1", data-tab-control="tab2") 2
-// .tab-block(data-tab-id="tabId1", data-tab-block="tab1") 1
-// .tab-block(data-tab-id="tabId1", data-tab-block="tab2") 2
 const tabIdList = document.querySelectorAll("[data-tab-id]");
 if (tabIdList) {
 	let tabGroupList = new Set();
@@ -36,27 +31,27 @@ if (tabIdList) {
 
 // Слайдер
 // https://swiperjs.com/swiper-api
-for (const slider of document.querySelectorAll(".main-slider")) {
+for (const slider of document.querySelectorAll(".main-slider-w")) {
 	var swiper = new Swiper(slider, {
 		loop: true,
 		slidesPerView: "auto",
 		centeredSlides: true,
 		speed: 800,
 		pagination: {
-			el: slider.querySelector(".main-slider__pagination"),
+			el: slider.querySelector(".main-slider-w__pagination"),
 			type: "fraction",
 		},
 		navigation: {
-			nextEl: slider.querySelector(".main-slider__button-next"),
-			prevEl: slider.querySelector(".main-slider__button-prev"),
+			nextEl: slider.querySelector(".main-slider-w__button-next"),
+			prevEl: slider.querySelector(".main-slider-w__button-prev"),
 		},
 		on: {
 			slideChangeTransitionStart: function () {
 				let textHeight = "";
 				if (document.documentElement.clientWidth <= 767) {
-					textHeight = this.slides[this.activeIndex].querySelector(".main-slider__content").scrollHeight + "px";
+					textHeight = this.slides[this.activeIndex].querySelector(".main-slider-w__content").scrollHeight + "px";
 				}
-				this.el.querySelector(".main-slider__button-wrap").style.bottom = textHeight;
+				this.el.querySelector(".main-slider-w__button-wrap").style.bottom = textHeight;
 			},
 		},
 	});
