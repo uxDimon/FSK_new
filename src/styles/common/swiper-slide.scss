@@ -102,6 +102,7 @@ $content-padding: 20px;
 	}
 	.gallery-slider__img {
 		height: 450px;
+		border-radius: 0;
 	}
 
 	.gallery-slider__nav {
@@ -112,7 +113,3 @@ $content-padding: 20px;
 		}
 	}
 }
-
-// @media screen and (max-width: 768px) {
-
-// }

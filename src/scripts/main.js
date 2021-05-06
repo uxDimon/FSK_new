@@ -244,3 +244,11 @@ class GallerySlider {
 }
 
 for (const gallerySlider of document.querySelectorAll(".gallery-slider")) new GallerySlider(gallerySlider);
+
+// Cлайдер advant-slider
+for (const slider of document.querySelectorAll(".advant-slider")) {
+	let advantSlider = new Swiper(slider, {
+		spaceBetween: 24,
+		slidesPerView: "auto",
+	});
+}

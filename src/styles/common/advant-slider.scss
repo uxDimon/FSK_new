@@ -1,0 +1,73 @@
+@mixin udoli {
+	--color-main: #e94200;
+	--color-dop: #727272;
+	--color-main-back: #ffffff;
+	--color-dop-back: #f6f8fa;
+	--color-border: #e5e5e5;
+	--color-main-text: #000000;
+	--color-dop-text: #bebebe;
+	--color-cta: #80b918;
+	--color-error: #eb001b;
+	--color-alert: #ffdd2d;
+}
+
+@mixin center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+$content-max-weight: 1200px;
+$content-padding: 20px;
+
+.advant-slider__wrap {
+	overflow: hidden;
+}
+
+.advant-slider {
+	width: 100%;
+	overflow: visible;
+}
+
+.advant-slider__slide {
+	display: block;
+	width: 280px;
+	text-decoration: none;
+}
+.advant-slider__img {
+	display: block;
+	width: 100%;
+	height: 350px;
+	object-fit: cover;
+	border-radius: 10px;
+	margin-bottom: 20px;
+}
+
+.advant-slider__text {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 21px;
+
+	> svg {
+		width: 30px;
+		height: auto;
+		margin: -10px -10px -10px 0;
+		--icon-color: var(--color-main);
+		display: block;
+		flex-shrink: 0;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.advant-slider__slide {
+		width: 260px;
+	}
+
+	.advant-slider__img {
+		height: 320px;
+	}
+}
