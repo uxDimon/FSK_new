@@ -204,3 +204,43 @@ class ContactMap {
 }
 
 for (const mapItem of document.querySelectorAll("[data-contact-map]")) new ContactMap(mapItem);
+
+// Галерея слайдер на всю ширену
+class GallerySlider {
+	constructor(item) {
+		this.body = item.querySelector(".gallery-slider__body");
+		this.nav = item.querySelector(".gallery-slider__nav");
+		this.buttonNext = item.querySelector(".gallery-slider__button-next");
+		this.buttonPrev = item.querySelector(".gallery-slider__button-prev");
+		this.created();
+	}
+	created() {
+		let galleryNav = new Swiper(this.nav, {
+			spaceBetween: 14,
+			slidesPerView: 4,
+			slidesPerColumn: 1,
+			watchSlidesVisibility: true,
+			watchSlidesProgress: true,
+			breakpoints: {
+				// when window width is >= 960px
+				960: {
+					spaceBetween: 24,
+					slidesPerView: 2,
+					slidesPerColumn: 2,
+				},
+			},
+		});
+		let galleryBody = new Swiper(this.body, {
+			spaceBetween: 10,
+			navigation: {
+				nextEl: this.buttonPrev,
+				prevEl: this.buttonNext,
+			},
+			thumbs: {
+				swiper: galleryNav,
+			},
+		});
+	}
+}
+
+for (const gallerySlider of document.querySelectorAll(".gallery-slider")) new GallerySlider(gallerySlider);
