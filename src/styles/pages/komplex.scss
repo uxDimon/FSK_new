@@ -242,3 +242,54 @@ $content-padding: 20px;
 		grid-gap: 24px;
 	}
 }
+
+// komplex-features
+.komplex-features {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-column-gap: 30px;
+	grid-row-gap: 40px;
+}
+
+.komplex-features__item {
+	display: flex;
+	align-items: center;
+}
+
+.komplex-features__icon {
+	margin-right: 30px;
+	flex-shrink: 0;
+
+	> svg {
+		display: block;
+		width: 55px;
+		height: auto;
+	}
+}
+
+.komplex-features__type {
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 17px;
+	color: var(--color-dop);
+	margin-bottom: 4px;
+}
+
+.komplex-features__text {
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 18px;
+}
+
+@media screen and (max-width: 960px) {
+	.komplex-features {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (max-width: 590px) {
+	.komplex-features {
+		grid-template-columns: repeat(1, 1fr);
+		grid-row-gap: 28px;
+	}
+}
