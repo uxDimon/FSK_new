@@ -632,27 +632,6 @@ body.dark {
 @import "./pages/complex.scss";
 @import "./common/footer.scss";
 
-/* Костыль ~(>_<。)＼ */
-.header_mimic {
-	height: 80px;
-}
-
-.footer,
-.header__top {
-	background-color: var(--color-dop-back);
-	color: var(--color-main-text);
-}
-
-.section-margin {
-	margin-top: 0;
-}
-
-.filter {
-	padding-top: 0;
-	border: 1px solid var(--color-border);
-	border-radius: 5px;
-}
-
 // @media screen and (max-width: 1274px) {
 
 // }
