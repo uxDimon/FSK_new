@@ -79,7 +79,7 @@ block content
 							.main-utp__text тыс. м² введено <br>в эксплуатацию в 2020 году
 
 		// Подобрать объект
-		//- .cont-block__wrap.cont-block_m70
+		.cont-block__wrap.cont-block_m70
 			.cont-block
 				h2.cont-block__h Подобрать объект
 
@@ -210,6 +210,20 @@ block content
 								.input__name Номер квартиры
 								input(type="text" name="" placeholder="Номер квартиры").input__input
 								.input__error Поле указано не верно  
+
+						.filter-m__body-line.filter-m__body-line_button-wrap
+							button.filter-m-button(data-map-hide-control="map1")
+								.filter-m-button__icon
+									svg(width="20" height="20")
+										use(xlink:href="./assets/images/sprite.svg#geo-point")
+								span(data-control-text='Скрыть карту') Объекты на карте
+
+
+		// Объекты на карте
+		.cont-block__wrap.cont-block_mb30(data-map-hide-block="map1")
+			.cont-block
+				<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=c5fc5199-ffeb-4030-a7b6-3369088c5bd2" type="text/javascript"></script>
+				.filter-m-map(data-filter-map='{"mapCenter":"59.950235, 30.316623","mapZoom":"11","points":[{"coord":"59.950235, 30.316623","imgUrl":"./assets/images/img-01.jpg","name":"Best Western Zoom Hotel","prise":"12.9","metroName":"Чёрная речка","metroBranchNumber":"2","wayTime":"10 минут","onFoot":"true"},{"coord":"59.950235, 30.4","imgUrl":"./assets/images/img-02.jpg","name":"Best Western Zoom Hotel2","prise":"6.9","metroName":"Чёрная речка","metroBranchNumber":"3","wayTime":"15 минут","onFoot":"false"}]}')
 
 		// Проекты в продаже
 		.cont-block__wrap.cont-block_m70

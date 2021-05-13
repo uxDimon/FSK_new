@@ -3,7 +3,7 @@ $content-max-weight: 1200px;
 $content-padding: 20px;
 
 // Шрифт
-$font-primary: "MuseoSansCyrl", sans-serif;
+$font-primary: "MuseoSansCyrl", "Museo Sans Cyrl", sans-serif;
 
 @mixin center {
 	position: absolute;
