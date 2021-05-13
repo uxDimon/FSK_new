@@ -242,7 +242,6 @@ class GallerySlider {
 		});
 	}
 }
-
 for (const gallerySlider of document.querySelectorAll(".gallery-slider")) new GallerySlider(gallerySlider);
 
 // Cлайдер advant-slider
@@ -252,3 +251,168 @@ for (const slider of document.querySelectorAll(".advant-slider")) {
 		slidesPerView: "auto",
 	});
 }
+
+// Объекты на карте
+class FilterMap {
+	constructor(item) {
+		this.data = JSON.parse(item.dataset.filterMap);
+		this.coordNormal();
+		this.points = this.data.points;
+		this.created(item);
+	}
+	coordNormal() {
+		// нормализуем координаты
+		for (const point of this.data.points) point.coord = point.coord.split(", ").map((item) => Number(item));
+		this.data.mapCenter = this.data.mapCenter.split(", ").map((item) => Number(item));
+		this.data.mapZoom = Number(this.data.mapZoom);
+	}
+	created(item) {
+		// Инит карыт
+		ymaps.ready(() => {
+			let myMap = new ymaps.Map(item, {
+				center: this.data.mapCenter,
+				zoom: this.data.mapZoom,
+				controls: [],
+			});
+			const pointHtml = ymaps.templateLayoutFactory.createClass(
+				// Создаём макет содержимого иконки.
+				`
+					<div class="filter-m-map-point">
+						<div class="filter-m-map-point__title">
+							<img src="$[properties.imgUrl]" alt="$[properties.name]" class="filter-m-map-point__img">
+							<div class="filter-m-map-point__body">
+								<div class="filter-m-map-point__name">$[properties.name]</div>
+								<div class="filter-m-map-point__metro-wrap">
+									<div class="card-main__metro">
+										<svg class="metro-color_$[properties.metroBranchNumber]" width="20" height="20">
+											<use xlink:href="./assets/images/sprite.svg#metro"></use>
+										</svg>
+										<span>$[properties.metroName]</span>
+									</div>
+									<div class="filter-m-map-point__time">
+										<svg width="15" height="15">
+											<use xlink:href="./assets/images/sprite.svg#little-$[properties.onFoot]"></use>
+										</svg>
+										<span>$[properties.wayTime]</span>
+									</div>
+								</div>
+								<div class="filter-m-map-point__prise">
+									<div class="filter-m-map-point__prise-rub">₽</div>
+									от <span>&nbsp$[properties.prise]&nbsp</span> млн/р.
+								</div>
+							</div>
+						</div>
+					</div>
+				`,
+				{
+					build: function () {
+						pointHtml.superclass.build.call(this);
+						const element = this.getParentElement().querySelector(".filter-m-map-point"),
+							activeClass = "active";
+
+						const bigShape = {
+							type: "Rectangle",
+							coordinates: [
+								[-10, -10],
+								[10, 10],
+							],
+						};
+						this.getData().options.set("shape", bigShape);
+						if (this.isActive) {
+							element.classList.add(activeClass);
+						} else if (this.inited) {
+							element.classList.remove(activeClass);
+						}
+						if (!this.inited) {
+							this.isActive = false;
+							this.inited = true;
+							// При клике по метке будем перестраивать макет.
+							this.getData().geoObject.events.add(
+								"mouseenter",
+								function () {
+									this.isActive = !this.isActive;
+									this.rebuild();
+								},
+								this
+							);
+							this.getData().geoObject.events.add(
+								"mouseleave",
+								function () {
+									this.isActive = !this.isActive;
+									this.rebuild();
+								},
+								this
+							);
+						}
+					},
+				}
+			);
+			// const myCollection = new ymaps.GeoObjectCollection();
+			for (const point of this.points) {
+				const myPlacemark = new ymaps.Placemark(
+					point.coord,
+					{
+						imgUrl: point.imgUrl,
+						metroBranchNumber: point.metroBranchNumber,
+						metroName: point.metroName,
+						name: point.name,
+						onFoot: point.onFoot === "true" ? "man" : "bus",
+						prise: point.prise,
+						wayTime: point.wayTime,
+					},
+					{
+						iconLayout: pointHtml,
+					}
+				);
+				myMap.geoObjects.add(myPlacemark);
+			}
+
+			myMap.controls.add("zoomControl", {
+				// Кнопки зума на карту
+				size: "small",
+				position: {
+					left: "auto",
+					top: "auto",
+					bottom: 30,
+					right: 20,
+				},
+			});
+			myMap.behaviors.disable("scrollZoom");
+		});
+	}
+}
+for (const filterMMap of document.querySelectorAll(".filter-m-map[data-filter-map]")) new FilterMap(filterMMap);
+
+// map-hide
+class MapHide {
+	constructor(options) {
+		this.block = options.block;
+		this.controlList = document.querySelectorAll(`[data-map-hide-control="${options.block.dataset.mapHideBlock}"]`);
+		this.created();
+		console.log(options.block);
+	}
+	created() {
+		this.block.style.height = "0px";
+		let mapOpen = false;
+		for (const control of this.controlList) {
+			const text = control.querySelector("[data-control-text]"),
+				textOld = text.innerText,
+				textNew = text.dataset.controlText;
+			control.addEventListener("click", () => {
+				if (mapOpen) {
+					this.block.style.height = "0px";
+					text.innerText = textOld
+					mapOpen = false;
+				} else {
+					this.block.style.height = this.block.scrollHeight + "px";
+					text.innerText = textNew
+					mapOpen = true;
+				}
+			});
+		}
+	}
+}
+for (const block of document.querySelectorAll("[data-map-hide-block]"))
+	new MapHide({
+		block: block,
+	});

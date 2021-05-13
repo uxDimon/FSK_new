@@ -401,9 +401,11 @@ class MapHide {
 			control.addEventListener("click", () => {
 				if (mapOpen) {
 					this.block.style.height = "0px";
+					text.innerText = textOld
 					mapOpen = false;
 				} else {
 					this.block.style.height = this.block.scrollHeight + "px";
+					text.innerText = textNew
 					mapOpen = true;
 				}
 			});

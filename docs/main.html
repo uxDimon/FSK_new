@@ -105,6 +105,197 @@
         </div>
       </div>
       <!-- Подобрать объект-->
+      <div class="cont-block__wrap cont-block_m70">
+        <div class="cont-block">
+          <h2 class="cont-block__h">Подобрать объект</h2>
+          <div class="filter-m"> 
+            <ul class="filter-m__head"> 
+              <li class="filter-m__head-button-wrap">
+                <label class="filter-m__head-button">
+                  <input class="filter-m__head-button-input" type="radio" name="filter-head-button" checked>
+                  <div class="filter-m__head-button-text">Квартиры и апартаменты</div>
+                </label>
+              </li>
+              <li class="filter-m__head-button-wrap">
+                <label class="filter-m__head-button">
+                  <input class="filter-m__head-button-input" type="radio" name="filter-head-button">
+                  <div class="filter-m__head-button-text">Коммерческие помещения</div>
+                </label>
+              </li>
+              <li class="filter-m__head-button-wrap">
+                <label class="filter-m__head-button">
+                  <input class="filter-m__head-button-input" type="radio" name="filter-head-button">
+                  <div class="filter-m__head-button-text">Паркинги</div>
+                </label>
+              </li>
+              <li class="filter-m__head-button-wrap">
+                <label class="filter-m__head-button">
+                  <input class="filter-m__head-button-input" type="radio" name="filter-head-button">
+                  <div class="filter-m__head-button-text">Кладовые</div>
+                </label>
+              </li>
+            </ul>
+            <div class="filter-m__body"> 
+              <div class="filter-m__body-line"> 
+                <div class="multi-select">
+                  <div class="multi-select__name">Количество комнат</div>
+                  <ul class="multi-select__body"> 
+                    <li class="multi-select__item"> 
+                      <label class="multi-select__buttn">
+                        <input class="multi-select__input" type="checkbox" name="rooms">
+                        <div class="multi-select__text">С</div>
+                      </label>
+                    </li>
+                    <li class="multi-select__item"> 
+                      <label class="multi-select__buttn">
+                        <input class="multi-select__input" type="checkbox" name="rooms">
+                        <div class="multi-select__text">1</div>
+                      </label>
+                    </li>
+                    <li class="multi-select__item"> 
+                      <label class="multi-select__buttn">
+                        <input class="multi-select__input" type="checkbox" name="rooms">
+                        <div class="multi-select__text">2</div>
+                      </label>
+                    </li>
+                    <li class="multi-select__item"> 
+                      <label class="multi-select__buttn">
+                        <input class="multi-select__input" type="checkbox" name="rooms">
+                        <div class="multi-select__text">3</div>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+                <div class="multi-select">
+                  <div class="multi-select__name"></div>
+                  <ul class="multi-select__body"> 
+                    <li class="multi-select__item"> 
+                      <label class="multi-select__buttn">
+                        <input class="multi-select__input" type="checkbox" name="rooms">
+                        <div class="multi-select__text">Евро</div>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+                <div class="dual-range filter-m__body_dual-range" data-dual-range="{&quot;min&quot;:&quot;3.1&quot;,&quot;max&quot;:&quot;16.7&quot;,&quot;step&quot;:&quot;0.1&quot;}">
+                  <div class="dual-range__name">Стоимость, млн ₽</div>
+                  <div class="dual-range__body"> 
+                    <label class="dual-range__input"> 
+                      <input class="dual-range__input-input" type="number" name="" data-course="from" data-type="number">
+                      <div class="dual-range__input-text">от</div>
+                      <svg class="dual-range__input-icon" width="12" height="52">
+                        <use xlink:href="./assets/images/sprite.svg#dual-range">                                       </use>
+                      </svg>
+                    </label>
+                    <label class="dual-range__input"> 
+                      <input class="dual-range__input-input" type="number" name="" data-course="to" data-type="number">
+                      <div class="dual-range__input-text">до</div>
+                    </label>
+                    <div class="dual-range__body-progres"></div>
+                    <input class="dual-range__range" type="range" name="" data-course="from" data-type="range">
+                    <input class="dual-range__range" type="range" name="" data-course="to" data-type="range">
+                  </div>
+                </div>
+                <div class="dual-range filter-m__body_dual-range" data-dual-range="{&quot;min&quot;:&quot;21&quot;,&quot;max&quot;:&quot;145.5&quot;,&quot;step&quot;:&quot;0.5&quot;}">
+                  <div class="dual-range__name">Площадь, м²</div>
+                  <div class="dual-range__body"> 
+                    <label class="dual-range__input"> 
+                      <input class="dual-range__input-input" type="number" name="" data-course="from" data-type="number">
+                      <div class="dual-range__input-text">от</div>
+                      <svg class="dual-range__input-icon" width="12" height="52">
+                        <use xlink:href="./assets/images/sprite.svg#dual-range">                                       </use>
+                      </svg>
+                    </label>
+                    <label class="dual-range__input"> 
+                      <input class="dual-range__input-input" type="number" name="" data-course="to" data-type="number">
+                      <div class="dual-range__input-text">до</div>
+                    </label>
+                    <div class="dual-range__body-progres"></div>
+                    <input class="dual-range__range" type="range" name="" data-course="from" data-type="range">
+                    <input class="dual-range__range" type="range" name="" data-course="to" data-type="range">
+                  </div>
+                </div>
+                <lable class="input filter-m__body_input">
+                  <div class="input__name">Готовность до</div>
+                  <select class="input__input" name="">
+                    <option value="1">Любой</option>
+                    <option value="2">Любой3</option>
+                    <option value="3">Любой2</option>
+                  </select>
+                </lable>
+              </div>
+              <div class="filter-m__body-line filter-m__body-line_extra">
+                <div class="dual-range filter-m__body_dual-range" data-dual-range="{&quot;min&quot;:&quot;5&quot;,&quot;max&quot;:&quot;50&quot;,&quot;step&quot;:&quot;1&quot;}">
+                  <div class="dual-range__name">Кухня, м2</div>
+                  <div class="dual-range__body"> 
+                    <label class="dual-range__input"> 
+                      <input class="dual-range__input-input" type="number" name="" data-course="from" data-type="number">
+                      <div class="dual-range__input-text">от</div>
+                      <svg class="dual-range__input-icon" width="12" height="52">
+                        <use xlink:href="./assets/images/sprite.svg#dual-range">                                       </use>
+                      </svg>
+                    </label>
+                    <label class="dual-range__input"> 
+                      <input class="dual-range__input-input" type="number" name="" data-course="to" data-type="number">
+                      <div class="dual-range__input-text">до</div>
+                    </label>
+                    <div class="dual-range__body-progres"></div>
+                    <input class="dual-range__range" type="range" name="" data-course="from" data-type="range">
+                    <input class="dual-range__range" type="range" name="" data-course="to" data-type="range">
+                  </div>
+                </div>
+                <div class="dual-range filter-m__body_dual-range" data-dual-range="{&quot;min&quot;:&quot;5&quot;,&quot;max&quot;:&quot;50&quot;,&quot;step&quot;:&quot;1&quot;}">
+                  <div class="dual-range__name">Этаж</div>
+                  <div class="dual-range__body"> 
+                    <label class="dual-range__input"> 
+                      <input class="dual-range__input-input" type="number" name="" data-course="from" data-type="number">
+                      <div class="dual-range__input-text">от</div>
+                      <svg class="dual-range__input-icon" width="12" height="52">
+                        <use xlink:href="./assets/images/sprite.svg#dual-range">                                       </use>
+                      </svg>
+                    </label>
+                    <label class="dual-range__input"> 
+                      <input class="dual-range__input-input" type="number" name="" data-course="to" data-type="number">
+                      <div class="dual-range__input-text">до</div>
+                    </label>
+                    <div class="dual-range__body-progres"></div>
+                    <input class="dual-range__range" type="range" name="" data-course="from" data-type="range">
+                    <input class="dual-range__range" type="range" name="" data-course="to" data-type="range">
+                  </div>
+                </div>
+                <lable class="input filter-m__body_input">
+                  <div class="input__name">Корпус (если есть)</div>
+                  <select class="input__input" name="">
+                    <option value="1">Любой</option>
+                    <option value="2">Любой3</option>
+                    <option value="3">Любой2</option>
+                  </select>
+                </lable>
+                <lable class="input filter-m__body_input">
+                  <div class="input__name">Номер квартиры</div>
+                  <input class="input__input" type="text" name="" placeholder="Номер квартиры">
+                  <div class="input__error">Поле указано не верно  </div>
+                </lable>
+              </div>
+              <div class="filter-m__body-line filter-m__body-line_button-wrap">
+                <button class="filter-m-button" data-map-hide-control="map1">
+                  <div class="filter-m-button__icon">
+                    <svg width="20" height="20">
+                      <use xlink:href="./assets/images/sprite.svg#geo-point"></use>
+                    </svg>
+                  </div><span data-control-text="Скрыть карту">Объекты на карте</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Объекты на карте-->
+      <div class="cont-block__wrap cont-block_mb30" data-map-hide-block="map1">
+        <div class="cont-block"><script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=c5fc5199-ffeb-4030-a7b6-3369088c5bd2" type="text/javascript"></script>
+          <div class="filter-m-map" data-filter-map="{&quot;mapCenter&quot;:&quot;59.950235, 30.316623&quot;,&quot;mapZoom&quot;:&quot;11&quot;,&quot;points&quot;:[{&quot;coord&quot;:&quot;59.950235, 30.316623&quot;,&quot;imgUrl&quot;:&quot;./assets/images/img-01.jpg&quot;,&quot;name&quot;:&quot;Best Western Zoom Hotel&quot;,&quot;prise&quot;:&quot;12.9&quot;,&quot;metroName&quot;:&quot;Чёрная речка&quot;,&quot;metroBranchNumber&quot;:&quot;2&quot;,&quot;wayTime&quot;:&quot;10 минут&quot;,&quot;onFoot&quot;:&quot;true&quot;},{&quot;coord&quot;:&quot;59.950235, 30.4&quot;,&quot;imgUrl&quot;:&quot;./assets/images/img-02.jpg&quot;,&quot;name&quot;:&quot;Best Western Zoom Hotel2&quot;,&quot;prise&quot;:&quot;6.9&quot;,&quot;metroName&quot;:&quot;Чёрная речка&quot;,&quot;metroBranchNumber&quot;:&quot;3&quot;,&quot;wayTime&quot;:&quot;15 минут&quot;,&quot;onFoot&quot;:&quot;false&quot;}]}"></div>
+        </div>
+      </div>
       <!-- Проекты в продаже-->
       <div class="cont-block__wrap cont-block_m70">
         <div class="cont-block">
