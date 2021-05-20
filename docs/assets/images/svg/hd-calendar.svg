@@ -4,9 +4,9 @@
         stroke="#E84E0E" stroke-linecap="round" stroke-linejoin="round" />
     <path
         d="M29.374 6.00011V12.2194M16.0516 6.00011V12.2194V6.00011ZM16.0516 24.6579V32.432V24.6579ZM19.1863 28.5449H21.5373H19.1863Z"
-        stroke="var(--icon-color, #ffffff)" stroke-linecap="round" stroke-linejoin="round" />
+        stroke="var(--color-main-text, #ffffff)" stroke-linecap="round" stroke-linejoin="round" />
     <path d="M9.00079 17.6613H36.4294" stroke="#E84E0E" stroke-linecap="round" stroke-linejoin="round" />
     <path
         d="M29.3786 32.4319H24.6766C27.0276 30.1059 29.3786 28.2782 29.3786 26.99C29.3786 26.3715 29.1309 25.7783 28.69 25.3409C28.2491 24.9035 27.6511 24.6578 27.0276 24.6578C26.4041 24.6578 25.8061 24.9035 25.3652 25.3409C24.9243 25.7783 24.6766 26.3715 24.6766 26.99"
-        stroke="var(--icon-color, #ffffff)" stroke-linecap="round" stroke-linejoin="round" />
+        stroke="var(--color-main-text, #ffffff)" stroke-linecap="round" stroke-linejoin="round" />
 </svg>
