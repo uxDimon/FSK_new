@@ -1,0 +1,160 @@
+.card-mortgage {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 24px;
+    margin-top: 30px;
+}
+.card-mortgage__item {
+    min-height: 134px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 131%;
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+    padding: 10px;
+}
+.card-mortgage__icon {
+    margin-right: 15px;
+}
+body.dark {
+    .card-mortgage__icon svg {
+        stroke: var(--color-main-text);
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .card-mortgage {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 24px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .header-block__img_m {
+        width: auto;
+        background-position-x: -320px;
+        border-radius: unset;
+        margin: 0 -20px;
+    }
+    .card-mortgage {
+        grid-template-columns: 1fr;
+    }
+    .card-mortgage__item {
+        min-height: 100px;
+        justify-content: flex-start;
+        padding-left: 63px;
+    }
+}
+
+.cont-block__wrap_person {
+    position: relative;
+    background-image: url('../images/back-w100.jpg');
+    background-repeat: no-repeat;
+    padding-top: 49px;
+    padding-bottom: 76px;
+
+    &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(45, 43, 46, 0.9);
+    }
+
+    .cont-block {
+        position: relative;
+        z-index: 1;
+    }
+
+    .cont-block__h {
+        max-width: 885px;
+        font-size: 25px;
+        line-height: 120%;
+        margin-bottom: 51px;
+    }
+}
+.card-person {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    border: 1px solid var(--color-dop);
+    border-radius: 5px;
+}
+.card-person__item {
+    border-right: inherit;
+    padding: 25px;
+
+    &:nth-child(5) {
+        border: none;
+    }
+}
+.card-person__icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 24px;
+}
+
+@media screen and (max-width: 767px) {
+    .cont-block__wrap_person {
+        display: none;
+    }
+}
+
+.mort-types {
+    .cont-block {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 26px;
+        margin-bottom: 120px;
+
+        &:nth-child(2n + 1) {
+            .mort-types__img-wrap {
+                order: 2;
+            }
+        }
+    }
+}
+.mort-types__img-wrap {
+    img {
+        max-width: 100%;
+        width: 100%;
+        display: block;
+        border-radius: 7px;
+    }
+}
+.mort-types__text-wrap {
+    .cont-block__h {
+        font-size: 25px;
+        line-height: 120%;
+        margin-bottom: 16px;
+    }
+
+    p {
+        font-weight: 300;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .mort-types {
+        .cont-block {
+            grid-template-columns: 1fr;
+            row-gap: 30px;
+            margin-bottom: 50px;
+
+            &:nth-child(2n + 1) {
+                .mort-types__img-wrap {
+                    order: initial;
+                }
+            }
+        }
+    }
+    .mort-types__img-wrap {
+        img {
+            height: 180px;
+            object-fit: cover;
+        }
+    }
+}
