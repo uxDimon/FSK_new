@@ -1202,7 +1202,8 @@ body.dark .button-zoom svg {
     height: 200px;
     order: 1;
     flex: auto;
-    border-radius: 0; } }
+    border-radius: 0;
+    margin: 25px 0; } }
 
 @media screen and (max-width: 568px) {
   .main-form__form {
